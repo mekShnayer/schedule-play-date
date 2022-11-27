@@ -8,10 +8,8 @@ import './background.png';
 function App() { 
   return (
     <div className="App">
-      {/* <img src={} ></img> */}
-      {/* <Home /> */}
-      {/* <WeatherPage /> */}
-      <Weather />
+      <Home />
+      <WeatherPage />
     </div>
   );
 }

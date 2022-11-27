@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import { connect } from 'react-redux';
 import './WeatherApi.css'
 const WeatherApi = (props) => {
-
+    //const weatherInfo = useSelector(state=> state.weatherInfo) //should import this from react-redux;
+    //const dispatch = useDispatch()
     const fetchCall = (url) => {
-        if (props.userLocation.x != '') {
+        if (props.userLocation?.x != '') {
             fetch(url).then(res => res.json()).then(data => {
-                console.log(data)
+                // console.log(data)
                 if (data.current.temp_c != props.weatherInfo.temperture) {
 
                     props.updateWeather({
@@ -28,7 +29,7 @@ const WeatherApi = (props) => {
         console.log("Available")
         navigator.geolocation.getCurrentPosition((position) => {
             console.log(position.coords.latitude, position.coords.longitude)
-            if (position.coords.latitude != props.userLocation.x) {
+            if (position.coords.latitude != props.userLocation?.x) {
 
                 props.updateUserLocation({
                     x: position.coords.latitude,
@@ -41,7 +42,7 @@ const WeatherApi = (props) => {
         console.log("location Not Available");
     }
 
-    const url = `http://api.weatherapi.com/v1/current.json?key=0344d9a9678746cd850100447222311&q=${props.userLocation.x},${props.userLocation.y}`
+    const url = `http://api.weatherapi.com/v1/current.json?key=0344d9a9678746cd850100447222311&q=${props.userLocation?.x},${props.userLocation?.y}`
 
     fetchCall(url)
     console.log('props:', props)
@@ -69,8 +70,8 @@ const mapStateToProps = (state) => {
 }
 const mapDispatchToProps = (dispatch) => {
     return {
-        updateWeather: (weatherInfo) => dispatch({ type: 'UPDATE_WEATHERINFO', weatherInfo: weatherInfo }),
-        updateUserLocation: (userLocation) => dispatch({ type: 'UPDATE_USERLOCATION', userLocation: userLocation })
+        updateWeather: (weatherInfo) => dispatch({ type: 'UPDATE_WEATHERINFO', weatherInfo }),
+        updateUserLocation: (userLocation) => dispatch({ type: 'UPDATE_USERLOCATION', userLocation })
     }
 }
 

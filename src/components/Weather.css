@@ -1,0 +1,51 @@
+
+.weather-component{
+    /* border: solid; */
+    height: fit-content;
+    display: flex;
+    position: relative;
+    /* top: 20px; */
+    flex-wrap: wrap;
+}
+.glassmorphism{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    /* margin: auto; */
+    width: -moz-fit-content;
+    width: fit-content;
+    flex-direction: row;
+    border-color: black;
+    border-style: solid;
+    min-width: 200px;
+    color: #224;
+    max-width: 300px;
+    height: -moz-fit-content;
+    height: fit-content;
+    border: 1px solid rgba(255, 255, 255, .25);
+    border-radius: 20px;
+    background-color: rgba(192, 179, 94, 0.339);
+    box-shadow: 0 0 10px 1px rgb(0 0 0 / 25%);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.glassmorphism-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: 90px;
+    height: 85px;
+    border-color: black;
+    border-style: solid;
+    color: #224;
+    max-width: 500px;
+    border: 1px solid rgba(255, 255, 255, .25);
+    border-radius: 10px;
+    background-color: rgba(248, 248, 248, 0.495);
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(10px);
+}

@@ -3,12 +3,13 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { createStore } from 'redux';
+import { createStore, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
 import rootReducer from './redux/reducers/rootReducer';
-
+import testReducer from './redux/reducers/testReducer';
+// combineReducers({ rootReducer, testReducer })
 const store = createStore(rootReducer);
-
+//for some reason cant combine reducers
 store.subscribe(() => {
   console.log('redux store had changed!', store.getState())
 })

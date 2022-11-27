@@ -1,5 +1,3 @@
-import { createStore } from 'redux';
-import { Provider } from 'react-redux';
 
 const initState = {
     weatherInfo: {
@@ -17,24 +15,24 @@ const initState = {
 }
 
 function rootReducer(state = initState, action) {
-    if (action.type == 'GET_STATE') {
-        return {
-            ...state
-        }
+    switch (action.type) {
+        case 'UPDATE_USERLOCATION':
+            return {
+                ...state,
+                userLocation: action.userLocation
+            }
+            break;
+        case 'UPDATE_WEATHERINFO':
+            return {
+                ...state,
+                weatherInfo: action.weatherInfo
+            }
+            break;
+        default:
+            return {
+                ...state
+            }
     }
-    if (action.type == 'UPDATE_USERLOCATION') {
-        return {
-            ...state,
-            userLocation: action.userLocation
-        }
-    }
-    if (action.type == 'UPDATE_WEATHERINFO') {
-        return {
-            ...state,
-            weatherInfo: action.weatherInfo
-        }
-    }
-
 }
 
 export default rootReducer;

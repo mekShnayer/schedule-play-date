@@ -18,23 +18,14 @@ function App() {
   const state = useSelector(state => state)
   const dispatch = useDispatch()
   const isLogedIn = useSelector(state => state.isLogedIn)
-  // localStorage.setItem('state', JSON.stringify(state))
-  // console.log(JSON.parse(localStorage.getItem('state')))
-  // JSON.parse(localStorage.getItem('state'))
-  const localState = JSON.parse(localStorage.getItem('state'))
-  // useEffect(() => {
-  //   const localState = JSON.parse(localStorage.getItem('state'))
-  //   localState.isLogedIn ?
-  //     console.log('rendering app', localStorage.getItem('state'))
-  // }, [])
+
   const onlineCheck = () => {
     const localState = JSON.parse(localStorage.getItem('state'))
+    console.log('local state', localState)
     if (localState) {
-      // console.log(localState)
-      localState.isLogedIn ?  dispatch({ type: 'UPDATE_STATE' ,state:localState}) : console.log('')
+      localState.isLogedIn ? dispatch({ type: 'UPDATE_STATE', payload: { ...localState } }) : localStorage.setItem('state', JSON.stringify(state))
     } else {
-      console.log('local storage undefined or null')
-      //should do nothing
+      localStorage.setItem('state', JSON.stringify(state))
     }
   }
   useEffect(() => {
@@ -42,6 +33,8 @@ function App() {
   }, [])
 
   useEffect(() => {
+    
+   console.log('unmounting app component. state:',state)
     return () => localStorage.setItem('state', JSON.stringify(state))
   })
   return (

@@ -7,8 +7,9 @@ const NavBar = () => {
 
     return (
         <React.Fragment>
-            <nav>
-                <div className="navbar">
+
+            <div className="navbar">
+              
                     {/* <h1>React Router</h1> */}
                     <div className="link">
                         <Link to={'/'} className='navbar-brand' >
@@ -21,19 +22,19 @@ const NavBar = () => {
                         <Link to={'/activity'} className='navbar-brand'> Activities</Link>
 
                     </div>
-                    <div>
+                    <div className="link">
                         <Link to={'/weather'} className='navbar-brand'> Weather</Link>
                     </div>
-                    <div>
+                    <div className="link">
                         <Link to={'/profile'} className='navbar-brand'> Profile</Link>
                     </div>
 
                     {/* <Link to={'/pagenotfound'} className='navbar-brand'> Page Not Found</Link> */}
                     {/* <Link to={'/contacts/list'} className='navbar-brand'>User list</Link> */}
                     {/* <Link to={'/'} className='navbar-brand'>React Router</Link> */}
+              
+            </div>
 
-                </div>
-            </nav>
         </React.Fragment>
     )
 }

@@ -1,0 +1,9 @@
+.navbar {
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding:2px;
+    justify-content: space-evenly;
+    background-color: aqua;
+}

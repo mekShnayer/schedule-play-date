@@ -1,11 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from 'react-redux'
 
 
 
 
 const LoginForm = () => {
-    const isLogedIn = useSelector(state => state.isLogedIn)
+    const localstate = useSelector(state => state)
+    useEffect(() => {
+
+        console.log('unmounting app component. state:', state)
+        return () => localStorage.setItem('state', JSON.stringify(localstate))
+    })
     const dispatch = useDispatch()
     const [state, setState] = useState({
         user: {
@@ -25,7 +30,8 @@ const LoginForm = () => {
     const login = (event) => {
         event.preventDefault();
         console.log(state.user)
-        dispatch({ type: 'TOGGLE_LOGIN' })
+        dispatch({ type: 'LOGIN' })
+
     }
     return (
         <div className="container/card">

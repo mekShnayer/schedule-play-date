@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from 'react-redux'
-
+import { useEffect } from "react";
 const initState = {
     activityName: '',
     description: ''
@@ -8,11 +8,14 @@ const initState = {
 
 
 const AddActivity = () => {
+
+    const state = useSelector(state => state)
+    useEffect(() => {
+        console.log('unmounting app component. state:', state)
+        return () => localStorage.setItem('state', JSON.stringify(state))
+    })
     const dispatch = useDispatch()
     const [activity, setActivity] = useState(initState)
-
-
-
 
     const updateActivity = (event) => {
         setActivity({
@@ -24,6 +27,7 @@ const AddActivity = () => {
     const addActivity = (event) => {
         event.preventDefault();
         dispatch({ type: 'ADD_ACTIVITY', payload: activity })
+
     }
     const clear = (e) => {
         e.preventDefault();

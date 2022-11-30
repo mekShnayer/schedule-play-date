@@ -20,7 +20,8 @@ function rootReducer(state = initState, action) {
     switch (action.type) {
         case 'UPDATE_STATE':
             return {
-                ...action.state
+                ...state,
+                ...action.payload
             }
             break;
         case 'UPDATE_USERLOCATION':
@@ -39,6 +40,12 @@ function rootReducer(state = initState, action) {
             return {
                 ...state,
                 isLogedIn: !state.isLogedIn
+            }
+            break;
+        case 'LOGIN':
+            return {
+                ...state,
+                isLogedIn: true
             }
             break;
         case 'ADD_ACTIVITY':

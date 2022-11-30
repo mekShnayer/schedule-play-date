@@ -12,7 +12,8 @@ const initState = {
     userLocation: {
         x: '',
         y: ''
-    }
+    },
+    activities: []
 }
 
 function rootReducer(state = initState, action) {
@@ -32,8 +33,15 @@ function rootReducer(state = initState, action) {
         case 'TOGGLE_LOGIN':
             return {
                 ...state,
-                isLogedIn: !state.isLogedIn //this should toggle the log in
+                isLogedIn: !state.isLogedIn
             }
+            break;
+        case 'ADD_ACTIVITY':
+            return {
+                ...state,
+                activities: [...state.activities, action.payload]
+            }
+            break;
         default:
             return {
                 ...state

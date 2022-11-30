@@ -3,15 +3,14 @@ import WeatherApi from './api-calls/WeatherApi';
 import './App.css';
 import WeatherPage from './pages/WeatherPage';
 import Home from './pages/Home';
-import Weather from './components/Weather';
 import './background.png';
-import { Route, Routes, Navigate } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import ActivityPage from './pages/ActivityPage';
 import About from './pages/About';
 import NavBar from './routing/NavBar';
 import Profile from './pages/Profile';
 import LoginForm from './components/LoginForm';
-import { useDispatch, useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
 
 
 function App() {
@@ -29,10 +28,6 @@ function App() {
       {isLogedIn ? <NavBar /> : ''}
 
 
-
-
-      {/* <Home />
-      <WeatherPage /> */}
     </div>
   );
 }

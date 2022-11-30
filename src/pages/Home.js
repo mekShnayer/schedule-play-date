@@ -1,6 +1,7 @@
 import React from "react";
 import './Home.css'
 import { useDispatch, useSelector } from 'react-redux'
+import LoginForm from "../components/LoginForm";
 
 const Home = () => {
     // const dispatch = useDispatch()
@@ -15,6 +16,7 @@ const Home = () => {
             <ol>
                 <p>need to perform:</p>
                 <li>log in form</li>
+                {/* <LoginForm /> */}
                 <li>pages: home, profile, </li>
                 <li className='done'>api call: location , weather</li>
                 <li>make sure the info is saved for your user</li>

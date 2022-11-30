@@ -1,5 +1,6 @@
 
 const initState = {
+    isLogedIn: false,
     weatherInfo: {
         image_url: '',
         temperture: '',
@@ -28,6 +29,11 @@ function rootReducer(state = initState, action) {
                 weatherInfo: action.weatherInfo
             }
             break;
+        case 'TOGGLE_LOGIN':
+            return {
+                ...state,
+                isLogedIn: !state.isLogedIn //this should toggle the log in
+            }
         default:
             return {
                 ...state

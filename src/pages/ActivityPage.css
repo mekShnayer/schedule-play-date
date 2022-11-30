@@ -1,0 +1,10 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    justify-content: flex-start;
+    min-height: 100vh;
+    align-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}

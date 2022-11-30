@@ -15,8 +15,6 @@ const AddActivity = () => {
 
 
     const updateActivity = (event) => {
-
-        console.log(activity)
         setActivity({
             ...activity,
             [event.target.name]: event.target.value

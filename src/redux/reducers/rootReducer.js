@@ -42,6 +42,12 @@ function rootReducer(state = initState, action) {
                 activities: [...state.activities, action.payload]
             }
             break;
+        // case 'DELETE_ACTIVITY':
+        //     return {
+        //         ...state,
+        //         activities: [...state.activities, action.payload]
+        //     }
+        //     break;
         default:
             return {
                 ...state

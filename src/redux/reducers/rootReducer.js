@@ -18,6 +18,11 @@ const initState = {
 
 function rootReducer(state = initState, action) {
     switch (action.type) {
+        case 'UPDATE_STATE':
+            return {
+                ...action.state
+            }
+            break;
         case 'UPDATE_USERLOCATION':
             return {
                 ...state,

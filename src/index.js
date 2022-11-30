@@ -14,6 +14,8 @@ const store = createStore(rootReducer);
 //for some reason cant combine reducers
 store.subscribe(() => {
   console.log('redux store had changed!', store.getState())
+  // localStorage.setItem('state', JSON.stringify(store.getState()))
+  console.log('local storage:',localStorage.getItem('state'))
 })
 store.dispatch({ type: 'GET_STATE' })
 

@@ -48,6 +48,12 @@ function rootReducer(state = initState, action) {
                 isLogedIn: true
             }
             break;
+            case 'LOGOUT':
+            return {
+                ...state,
+                isLogedIn: false
+            }
+            break;
         case 'ADD_ACTIVITY':
             return {
                 ...state,

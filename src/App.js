@@ -12,6 +12,8 @@ import Profile from './pages/Profile';
 import LoginForm from './components/LoginForm';
 import { useSelector, useDispatch } from 'react-redux'
 import { useEffect } from 'react';
+import Logo from './components/Logo';
+import Header from './components/Header';
 
 
 function App() {
@@ -33,8 +35,8 @@ function App() {
   }, [])
 
   useEffect(() => {
-    
-   console.log('unmounting app component. state:',state)
+
+    console.log('unmounting app component. state:', state)
     return () => localStorage.setItem('state', JSON.stringify(state))
   })
   return (
@@ -47,8 +49,9 @@ function App() {
         <Route path='/weather' element={<WeatherPage />}></Route>
         <Route path='/profile' element={<Profile />}></Route>
       </Routes>
-      {isLogedIn ? <NavBar /> : ''}
-      {isLogedIn ? 'logged in' : 'logged out'}
+      <Logo />
+      {isLogedIn ? <Header /> : ''}
+      {/* {isLogedIn ? 'logged in' : 'logged out'} */}
 
     </div>
   );

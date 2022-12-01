@@ -1,0 +1,6 @@
+.logo{
+    display: flex;
+    border: solid;
+    position: absolute;
+    top: 10%;
+}

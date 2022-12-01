@@ -1,11 +1,12 @@
 import React from 'react'
 import { useDispatch } from 'react-redux';
+import './LogOut.css'
 
 const LogOut = () => {
     const dispatch = useDispatch()
     return (
-        <div>
-            <button onClick={()=>dispatch({ type: 'LOGOUT' })}>Log Out</button>
+        <div className='log-out'>
+            <button className='log-out' onClick={() => dispatch({ type: 'LOGOUT' })}>Log Out</button>
         </div>
     )
 }

@@ -30,7 +30,7 @@ const LoginForm = () => {
     const login = (event) => {
         event.preventDefault();
         console.log(state.user)
-        dispatch({ type: 'LOGIN' })
+        dispatch({ type: 'LOGIN' ,payload:state.user.username})
 
     }
     return (

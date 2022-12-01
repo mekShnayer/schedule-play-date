@@ -1,0 +1,8 @@
+.header-container {}
+
+.user-greeting {
+    margin: 5px;
+    left: 0;
+    position: fixed;
+    top: 29px;
+}

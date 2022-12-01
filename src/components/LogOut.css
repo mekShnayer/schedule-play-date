@@ -1,0 +1,8 @@
+.log-out {
+    left: 0px;
+    display: flex;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    margin: 2px;
+}

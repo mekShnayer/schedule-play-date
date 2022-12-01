@@ -13,7 +13,10 @@ const initState = {
         x: '',
         y: ''
     },
-    activities: []
+    activities: [],
+    user: {
+        userName: ''
+    }
 }
 
 function rootReducer(state = initState, action) {
@@ -45,10 +48,14 @@ function rootReducer(state = initState, action) {
         case 'LOGIN':
             return {
                 ...state,
-                isLogedIn: true
+                isLogedIn: true,
+                user: {
+                    ...state.user,
+                    userName: action.payload
+                }
             }
             break;
-            case 'LOGOUT':
+        case 'LOGOUT':
             return {
                 ...state,
                 isLogedIn: false

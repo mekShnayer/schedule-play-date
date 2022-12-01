@@ -1,12 +1,14 @@
 import React from "react";
 import './Logo.css'
-import logo from './Logo_PlayDate.png';
-import logo2 from './logo2_play_date.png';
 const Logo = () => {
     return (
         <div className="logo">
-            logo
-            {/* <img src={logo2}></img> */}
+            <div className="text">
+                <h1 className="logo-h1">Play Date</h1>
+                <h6 className="logo-h6">MAKE THE BEST OF YOUR DAY</h6>
+            </div >
+
+            <div className="ball"></div>
         </div>
     )
 }

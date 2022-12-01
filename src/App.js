@@ -41,6 +41,10 @@ function App() {
   })
   return (
     <div className="App">
+
+      <Logo />
+      {isLogedIn ? <Header /> : ''}
+      {/* {isLogedIn ? 'logged in' : 'logged out'} */}
       <Routes>
         <Route path='/' element={isLogedIn ? <Home /> : <LoginForm />}></Route>
         {/* <Route path='/home' element={<Home />}></Route> */}
@@ -49,10 +53,6 @@ function App() {
         <Route path='/weather' element={<WeatherPage />}></Route>
         <Route path='/profile' element={<Profile />}></Route>
       </Routes>
-      <Logo />
-      {isLogedIn ? <Header /> : ''}
-      {/* {isLogedIn ? 'logged in' : 'logged out'} */}
-
     </div>
   );
 }

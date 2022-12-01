@@ -1,18 +1,14 @@
 
 .weather-component{
-    /* border: solid; */
     height: fit-content;
     display: flex;
     position: relative;
-    /* top: 20px; */
     flex-wrap: wrap;
 }
 .glassmorphism{
     display: flex;
     flex-wrap: wrap;
     padding: 10px;
-    /* margin: auto; */
-    width: -moz-fit-content;
     width: fit-content;
     flex-direction: row;
     border-color: black;
@@ -20,7 +16,6 @@
     min-width: 200px;
     color: #224;
     max-width: 300px;
-    height: -moz-fit-content;
     height: fit-content;
     border: 1px solid rgba(255, 255, 255, .25);
     border-radius: 20px;

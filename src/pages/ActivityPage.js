@@ -15,7 +15,7 @@ const ActivityPage = () => {
         return () => localStorage.setItem('state', JSON.stringify(state))
     })
     return (
-        <div className="page">
+        <div className="">
             Activity Page
             <br></br>
             <AddActivity />

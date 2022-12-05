@@ -41,18 +41,22 @@ function App() {
   })
   return (
     <div className="App">
-
-      <Logo />
+      <div className='logo-container'>
+        <Logo />
+      </div>
+      <div className='page-container'>
+        <Routes>
+          <Route path='/' element={isLogedIn ? <Home /> : <LoginForm />}></Route>
+          {/* <Route path='/home' element={<Home />}></Route> */}
+          <Route path='/about' element={<About />}></Route>
+          <Route path='/activity' element={<ActivityPage />}></Route>
+          <Route path='/weather' element={<WeatherPage />}></Route>
+          <Route path='/profile' element={<Profile />}></Route>
+        </Routes>
+      </div>
       {isLogedIn ? <Header /> : ''}
       {/* {isLogedIn ? 'logged in' : 'logged out'} */}
-      <Routes>
-        <Route path='/' element={isLogedIn ? <Home /> : <LoginForm />}></Route>
-        {/* <Route path='/home' element={<Home />}></Route> */}
-        <Route path='/about' element={<About />}></Route>
-        <Route path='/activity' element={<ActivityPage />}></Route>
-        <Route path='/weather' element={<WeatherPage />}></Route>
-        <Route path='/profile' element={<Profile />}></Route>
-      </Routes>
+
     </div>
   );
 }

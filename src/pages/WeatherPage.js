@@ -3,7 +3,7 @@ import React from "react";
 import Weather from '../components/Weather';
 const WeatherPage = () => {
     return (
-        <div>
+        <div >
             <Weather />
         </div>
     )

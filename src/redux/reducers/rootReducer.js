@@ -16,6 +16,9 @@ const initState = {
     activities: [],
     user: {
         userName: ''
+    },
+    info: {
+
     }
 }
 
@@ -70,9 +73,18 @@ function rootReducer(state = initState, action) {
         case 'DELETE_ACTIVITY':
             return {
                 ...state,
-                activities: action.activities 
+                activities: action.activities
             }
             break;
+        case 'ADD_CHILD':
+            return {
+                ...state,
+                info: {
+                    child: {
+                        ...action.payload
+                    }
+                }
+            }
         default:
             return {
                 ...state

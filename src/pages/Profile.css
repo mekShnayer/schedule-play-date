@@ -1,0 +1,15 @@
+.info-container{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    right: 0;
+    border: solid;
+    
+}
+
+
+.add-child-info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}

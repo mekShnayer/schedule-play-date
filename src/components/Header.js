@@ -11,7 +11,7 @@ const Header = () => {
 
             <NavBar />
             <div className="user-greeting">
-                Hello {userName}! Great to see you again!
+                Hello {userName}! Greate to see you again!
             </div>
 
 

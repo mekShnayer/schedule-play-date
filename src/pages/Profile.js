@@ -1,11 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from 'react-redux'
 import './Profile.css'
 
 const Profile = () => {
     const dispatch = useDispatch()
     const user = useSelector(state => state.user)
-    // const child = useSelector(state => state.info.child)
+    const state = useSelector(state => state)
+    useEffect(() => {
+        console.log('use effect')//
+        return ()=>{localStorage.setItem('state', JSON.stringify(state))}
+    })
+
+    const childInfo = state.info
     const [info, setInfo] = useState({
         childName: '',
         age: '',
@@ -30,9 +36,9 @@ const Profile = () => {
         <div>
             <div className="info-container">
                 <h4>Hello {user.userName}</h4>
-                <p>{info.childName} </p>
-                <p>{info.age}</p>
-                <p> friends:{info.friends.map(el=><p>{el}</p>)} </p>
+                <p>{childInfo.childName} </p>
+                <p>{childInfo.age}</p>
+                <div> friends:{childInfo.friends.length > 0 && childInfo.friends.map((el, i) => <div key={i}>{el}</div>)} </div>
             </div>
 
 

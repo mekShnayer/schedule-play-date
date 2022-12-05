@@ -18,7 +18,9 @@ const initState = {
         userName: ''
     },
     info: {
-
+        childName: '',
+        age: '',
+        friends: []
     }
 }
 
@@ -80,9 +82,9 @@ function rootReducer(state = initState, action) {
             return {
                 ...state,
                 info: {
-                    child: {
-                        ...action.payload
-                    }
+
+                    ...action.payload
+
                 }
             }
         default:

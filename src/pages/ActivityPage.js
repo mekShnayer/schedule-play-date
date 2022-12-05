@@ -11,7 +11,7 @@ const ActivityPage = () => {
     // const userLocation = useSelector(state => state.userLocation)
     const state = useSelector(state => state)
     useEffect(() => {
-        console.log('unmounting app component. state:', state)
+        // console.log('unmounting app component. state:', state)
         return () => localStorage.setItem('state', JSON.stringify(state))
     })
     return (

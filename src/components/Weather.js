@@ -11,7 +11,7 @@ const Weather = () => {
     const fetchCall = (url) => {
         if (userLocation.x != '' && userLocation.y != '') {
             fetch(url).then(res => res.json()).then(data => {
-                console.log(data)
+                // console.log(data)
                 if (data.current.temp_c != weatherInfo.temperture) {
                     dispatch({
                         type: 'UPDATE_WEATHERINFO', weatherInfo:
@@ -32,9 +32,9 @@ const Weather = () => {
     }
     const checkLocation = (userLocation) => {
         if ("geolocation" in navigator) {
-            console.log("Available")
+            // console.log("Available")
             navigator.geolocation.getCurrentPosition((position) => {
-                console.log(position.coords.latitude, position.coords.longitude)
+                // console.log(position.coords.latitude, position.coords.longitude)
                 if (position.coords.latitude != userLocation.x) {
 
                     dispatch({

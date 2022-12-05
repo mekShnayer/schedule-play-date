@@ -2,6 +2,7 @@
     display: flex;
     margin: 20px;
     width: fit-content;
+    flex-direction: column;
 }
 
 .glassmorphism {
@@ -12,7 +13,7 @@
     display: flex;
     flex-direction: row;
     /* width: ; */
-    border: solid;
+    /* border: solid; */
     flex-wrap: wrap;
 
 }

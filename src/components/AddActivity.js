@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from 'react-redux'
 import { useEffect } from "react";
 const initState = {
+    id: '',
     activityName: '',
     description: ''
 }
@@ -11,22 +12,26 @@ const AddActivity = () => {
 
     const state = useSelector(state => state)
     useEffect(() => {
-        console.log('unmounting app component. state:', state)
+        // console.log('unmounting app component. state:', state)
         return () => localStorage.setItem('state', JSON.stringify(state))
     })
     const dispatch = useDispatch()
-    const [activity, setActivity] = useState(initState)
+    const [activity, setActivity] = useState({
+        activityName: '',
+        description: ''
+    }
+    )
 
     const updateActivity = (event) => {
         setActivity({
             ...activity,
-            [event.target.name]: event.target.value
+            [event.target.name]: event.target.value,
         })
     }
 
     const addActivity = (event) => {
         event.preventDefault();
-        dispatch({ type: 'ADD_ACTIVITY', payload: activity })
+        dispatch({ type: 'ADD_ACTIVITY', payload: { id: `${state.activities.length + 1}`, ...activity } })
 
     }
     const clear = (e) => {

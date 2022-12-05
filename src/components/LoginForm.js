@@ -8,7 +8,7 @@ const LoginForm = () => {
     const localstate = useSelector(state => state)
     useEffect(() => {
 
-        console.log('unmounting app component. state:', state)
+        // console.log('unmounting app component. state:', state)
         return () => localStorage.setItem('state', JSON.stringify(localstate))
     })
     const dispatch = useDispatch()
@@ -29,7 +29,7 @@ const LoginForm = () => {
     }
     const login = (event) => {
         event.preventDefault();
-        console.log(state.user)
+        // console.log(state.user)
         dispatch({ type: 'LOGIN' ,payload:state.user.username})
 
     }

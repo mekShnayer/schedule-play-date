@@ -5,7 +5,7 @@ import './Header.css'
 
 const Header = () => {
     const userName = useSelector(state => state.user.userName)
-    console.log(userName)
+    // console.log(userName)
     return (
         <div className="header-container">
 

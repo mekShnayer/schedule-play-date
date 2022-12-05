@@ -23,7 +23,7 @@ function App() {
 
   const onlineCheck = () => {
     const localState = JSON.parse(localStorage.getItem('state'))
-    console.log('local state', localState)
+    // console.log('local state', localState)
     if (localState) {
       localState.isLogedIn ? dispatch({ type: 'UPDATE_STATE', payload: { ...localState } }) : localStorage.setItem('state', JSON.stringify(state))
     } else {
@@ -36,7 +36,7 @@ function App() {
 
   useEffect(() => {
 
-    console.log('unmounting app component. state:', state)
+    // console.log('unmounting app component. state:', state)
     return () => localStorage.setItem('state', JSON.stringify(state))
   })
   return (

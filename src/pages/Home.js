@@ -9,7 +9,7 @@ import Header from '../components/Header'
 const Home = () => {
     const localstate = useSelector(state => state)
     useEffect(() => {
-        console.log('unmounting app component. state:', state)
+        // console.log('unmounting app component. state:', state)
         return () => localStorage.setItem('state', JSON.stringify(localstate))
     })
     const weatherInfo = useSelector(state => state.weatherInfo)

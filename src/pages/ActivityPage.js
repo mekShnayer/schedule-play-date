@@ -16,8 +16,6 @@ const ActivityPage = () => {
     })
     return (
         <div className="">
-            Activity Page
-            <br></br>
             <AddActivity />
             <div>
                 <ActivityList />

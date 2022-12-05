@@ -6,7 +6,7 @@ const Profile = () => {
     const user = useSelector(state => state.user)
     return (
         <div>
-            Profile Page
+            
             <h4>name: {user.userName}</h4>
         </div>
     )

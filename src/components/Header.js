@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import NavBar from "../routing/NavBar";
-import './Header.css'
+import './styles/Header.css'
 
 const Header = () => {
     const userName = useSelector(state => state.user.userName)

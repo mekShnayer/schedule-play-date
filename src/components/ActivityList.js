@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch, useSelector } from 'react-redux'
-import './ActivityList.css'
+import './styles/ActivityList.css'
 import { useEffect } from "react";
 import Activity from "./Activity";
 

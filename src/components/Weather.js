@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector, useDispatch } from 'react-redux';
-import './Weather.css'
+import './styles/Weather.css'
 
 
 const Weather = () => {

@@ -21,7 +21,8 @@ const initState = {
         childName: '',
         age: '',
         friends: []
-    }
+    },
+    timeline: []
 }
 
 function rootReducer(state = initState, action) {
@@ -86,6 +87,11 @@ function rootReducer(state = initState, action) {
                     ...action.payload
 
                 }
+            }
+        case 'DONE_ACTIVITY':
+            return {
+                ...state,
+                timeline: [...state.timeline, action.payload]
             }
         default:
             return {

@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import LoginForm from "../components/LoginForm";
 import { useEffect } from "react";
 import Header from '../components/Header'
+import Timeline from "../components/Timeline";
 
 
 const Home = () => {
@@ -39,10 +40,15 @@ const Home = () => {
         <div className="home-page">
             <div className="message">
                 <img src={weatherInfo.image_url}></img>
-                {message}
-            </div>
-            <div className="pop-message">
+                {message}   <br></br>
                 {suggestion}
+                {/* <div className="pop-message">
+                    {suggestion}
+                </div> */}
+            </div>
+
+            <div>
+                <Timeline />
             </div>
         </div>
     )

@@ -32,15 +32,18 @@ const AddActivity = () => {
     const addActivity = (event) => {
         event.preventDefault();
         dispatch({ type: 'ADD_ACTIVITY', payload: { id: `${state.activities.length + 1}`, ...activity } })
-
-    }
-    const clear = (e) => {
-        e.preventDefault();
         setActivity({
             activityName: '',
             description: ''
         })
     }
+    // const clear = (e) => {
+    //     e.preventDefault();
+    //     setActivity({
+    //         activityName: '',
+    //         description: ''
+    //     })
+    // }
     return (
         <div className="container/card">
             <div className="header">
@@ -56,7 +59,7 @@ const AddActivity = () => {
                     </div>
                     <div>
                         <input type='submit' value='Add'></input>
-                        <button onClick={clear}>clear</button>
+                        {/* <button onClick={clear}>clear</button> */}
                     </div>
                 </form>
             </div >

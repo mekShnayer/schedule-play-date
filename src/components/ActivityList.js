@@ -22,7 +22,7 @@ const ActivityList = () => {
     </div>
     return (
         <div>
-            Activity List:
+            {/* Activity List: */}
             <div>
                 {activitiesList}
             </div>

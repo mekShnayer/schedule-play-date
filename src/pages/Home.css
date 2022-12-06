@@ -24,3 +24,18 @@
   font-size: 25px;
   padding: 10px;
 }
+
+.pop-message {
+  border-radius: 80px;
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  font-style: oblique;
+  font-size: 25px;
+  padding: 10px;
+  /* background-color: rgb(37, 180, 180); */
+  margin: 20px;
+  /* transform: translate(-500px, -250px);
+  transform: scale(2);
+  transition-duration: 2s; */
+}

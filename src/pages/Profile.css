@@ -1,8 +1,8 @@
 .info-container{
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
-    position: relative;
-    right: 0;
+    position:fixed;
+    left: 0;
     border: solid;
     
 }

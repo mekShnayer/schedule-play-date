@@ -1,8 +1,6 @@
 .logo {
     display: flex;
-    /* flex-direction: column; */
-    /* border: solid; */
-    position: relative;
+    position: fixed;
     top: 17px;
     padding: 10px;
     color: rgba(0, 22, 130, 0.75);

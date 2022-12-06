@@ -41,9 +41,9 @@ function App() {
   })
   return (
     <div className="App">
-      <div className='logo-container'>
+      {/* <div className='logo-container'>
         <Logo />
-      </div>
+      </div> */}
       <div className='page-container'>
         <Routes>
           <Route path='/' element={isLogedIn ? <Home /> : <LoginForm />}></Route>
@@ -54,7 +54,9 @@ function App() {
           <Route path='/profile' element={<Profile />}></Route>
         </Routes>
       </div>
-      {isLogedIn ? <Header /> : ''}
+      {isLogedIn ? <Header /> :
+        <Logo />
+      }
       {/* {isLogedIn ? 'logged in' : 'logged out'} */}
 
     </div>

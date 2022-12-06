@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from 'react-redux'
 
-
+import './styles/LoginForm.css'
 
 
 const LoginForm = () => {
@@ -34,17 +34,17 @@ const LoginForm = () => {
 
     }
     return (
-        <div className="container/card">
+        <div className="container">
             <div className="header">
                 <h1>Please Login Here</h1>
             </div>
             <div className="form-body">
                 <form onSubmit={login}>
                     <div>
-                        <input type='text' placeholder="user name" name='username' value={state.user.username} onChange={updateInput}></input>
+                        <input type='text' placeholder="user name" name='username' value={state.user.username} onChange={updateInput} required></input>
                     </div>
                     <div>
-                        <input type='password' placeholder="password" name='password' value={state.user.password} onChange={updateInput}></input>
+                        <input type='password' placeholder="password" name='password' value={state.user.password} onChange={updateInput} required></input>
                     </div>
                     <div>
                         <input type='submit' value='login'></input>

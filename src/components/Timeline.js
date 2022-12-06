@@ -16,7 +16,7 @@ const Timeline = () => {
     }) : ''
     return (
         <div className="timeline-container">
-            Timeline history:
+            {/* Timeline history: */}
             {TimeLog}
 
         </div>

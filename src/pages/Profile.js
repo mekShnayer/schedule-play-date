@@ -33,7 +33,7 @@ const Profile = () => {
         dispatch({ type: 'ADD_CHILD', payload: { ...info } })
     }
     return (
-        <div>
+        <div className="page">
             <div className="info-container">
                 <h4>Hello {user.userName}</h4>
                 <p>{childInfo.childName} </p>

@@ -1,4 +1,14 @@
-.header-container {}
+.header-container {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left:0;
+    width: 100%;
+    padding:2px;
+    background-color: rgba(0, 255, 255, 0.474);
+    justify-content: space-evenly;
+    /* justify-content: flex-end; */
+}
 
 .user-greeting {
     margin: 5px;
@@ -6,3 +16,4 @@
     position: fixed;
     top: 29px;
 }
+

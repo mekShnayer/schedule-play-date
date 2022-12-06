@@ -93,6 +93,11 @@ function rootReducer(state = initState, action) {
                 ...state,
                 timeline: [...state.timeline, action.payload]
             }
+        case 'CLEAR_LOG_HISTORY':
+            return {
+                ...state,
+                timeline: []
+            }
         default:
             return {
                 ...state

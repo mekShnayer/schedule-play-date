@@ -9,6 +9,7 @@ import Timeline from "../components/Timeline";
 
 const Home = () => {
     const localstate = useSelector(state => state)
+    const dispatch = useDispatch()
     useEffect(() => {
         return () => localStorage.setItem('state', JSON.stringify(localstate))
     })
@@ -49,6 +50,7 @@ const Home = () => {
 
             <div>
                 <Timeline />
+                <button onClick={() => { dispatch({ type: 'CLEAR_LOG_HISTORY' }) }}>Clear History</button>
             </div>
         </div>
     )

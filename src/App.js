@@ -19,7 +19,7 @@ import Header from './components/Header';
 function App() {
   const state = useSelector(state => state)
   const dispatch = useDispatch()
-  const isLogedIn = useSelector(state => state.isLogedIn)
+  const isLogedIn = useSelector(state => state.loginReducer.isLogedIn)
 
   const onlineCheck = () => {
     const localState = JSON.parse(localStorage.getItem('state'))

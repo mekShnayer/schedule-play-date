@@ -4,14 +4,15 @@ import './Profile.css'
 
 const Profile = () => {
     const dispatch = useDispatch()
-    const user = useSelector(state => state.user)
-    const state = useSelector(state => state)
+    const user = useSelector(state => state.loginReducer.user)
+    const stateInfo = useSelector(state => state.infoReducer)
+    const localState = useSelector(state=>state) //for local storage
     useEffect(() => {
         console.log('use effect')//
-        return ()=>{localStorage.setItem('state', JSON.stringify(state))}
+        return ()=>{localStorage.setItem('state', JSON.stringify(localState))}
     })
 
-    const childInfo = state.info
+    const childInfo = stateInfo.info
     const [info, setInfo] = useState({
         childName: '',
         age: '',

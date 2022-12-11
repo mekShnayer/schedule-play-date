@@ -6,8 +6,8 @@ import './styles/Weather.css'
 const Weather = () => {
 
     const dispatch = useDispatch()
-    const weatherInfo = useSelector(state => state.weatherInfo)
-    const userLocation = useSelector(state => state.userLocation)
+    const weatherInfo = useSelector(state => state.weatherReducer.weatherInfo)
+    const userLocation = useSelector(state => state.locationReducer.userLocation)
     const fetchCall = (url) => {
         if (userLocation.x != '' && userLocation.y != '') {
             fetch(url).then(res => res.json()).then(data => {

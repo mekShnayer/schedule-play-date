@@ -7,18 +7,23 @@ const initState = {
         text: '',
         location: '',
         updateTime: '',
-    }
+    },
 }
-function weatherReducer(state = initState.weatherInfo, action) {
+
+const weatherReducer = (state = initState, action) => {
     switch (action.type) {
         case 'UPDATE_WEATHERINFO':
             return {
                 ...state,
                 weatherInfo: action.weatherInfo
             }
-        default: return {
-            ...state
-        }
+            break;
+        default:
+            return {
+                ...state
+            }
     }
 }
+
 export default weatherReducer;
+/////

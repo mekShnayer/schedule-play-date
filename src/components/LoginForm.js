@@ -5,7 +5,7 @@ import './styles/LoginForm.css'
 
 
 const LoginForm = () => {
-    const localstate = useSelector(state => state)
+    const localstate = useSelector(state => state.loginReducer)
     useEffect(() => {
 
         // console.log('unmounting app component. state:', state)

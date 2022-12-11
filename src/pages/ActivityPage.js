@@ -9,7 +9,7 @@ import { useEffect } from "react";
 const ActivityPage = () => {
     // const dispatch = useDispatch()
     // const userLocation = useSelector(state => state.userLocation)
-    const state = useSelector(state => state)
+    const state = useSelector(state => state.activityReducer)
     useEffect(() => {
         // console.log('unmounting app component. state:', state)
         return () => localStorage.setItem('state', JSON.stringify(state))

@@ -4,7 +4,7 @@ import NavBar from "../routing/NavBar";
 import './styles/Header.css'
 import Logo from "./Logo";
 const Header = () => {
-    const userName = useSelector(state => state.user.userName)
+    const userName = useSelector(state => state.loginReducer.user.userName)
     // console.log(userName)
     return (
         <div className="header-container">

@@ -8,7 +8,6 @@ import { Provider } from 'react-redux';
 import rootReducer from './redux/reducers/rootReducer';
 
 import { BrowserRouter } from 'react-router-dom';
-import testReducer from './redux/reducers/testReducer';
 // combineReducers({ rootReducer, testReducer })
 const store = createStore(rootReducer);
 //for some reason cant combine reducers

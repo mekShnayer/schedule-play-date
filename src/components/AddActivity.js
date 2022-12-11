@@ -10,7 +10,7 @@ const initState = {
 
 const AddActivity = () => {
 
-    const state = useSelector(state => state)
+    const state = useSelector(state => state.activityReducer)
     useEffect(() => {
         // console.log('unmounting app component. state:', state)
         return () => localStorage.setItem('state', JSON.stringify(state))

@@ -5,7 +5,7 @@ import { useEffect } from "react";
 
 const Activity = (props) => {
     const dispatch = useDispatch()
-    const activities = useSelector(state => state.activities)
+    const activities = useSelector(state => state.activityReducer.activities)
     const activity = props.activity;
     const deleteActivity = (id) => {
         const filter = activities.filter(activity => activity.id != id)
@@ -15,6 +15,7 @@ const Activity = (props) => {
 
     const Done = (id) => {
         //activity name , date and time?, push this to the state and storage to show history
+        console.log(id)
         const activityDone = {
             name: activities[id - 1].activityName,
             description: activities[id - 1].description,

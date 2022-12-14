@@ -12,7 +12,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import { useEffect } from 'react';
 import Logo from './components/Logo';
 import Header from './components/Header';
-
+import Testing from './pages/Testing';
 
 function App() {
   const state = useSelector(state => state)
@@ -50,6 +50,7 @@ function App() {
           <Route path='/activity' element={<ActivityPage />}></Route>
           <Route path='/weather' element={<WeatherPage />}></Route>
           <Route path='/profile' element={<Profile />}></Route>
+          <Route path='/testing' element={<Testing />}></Route>
         </Routes>
       </div>
       {isLogedIn ? <Header /> :

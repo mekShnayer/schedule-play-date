@@ -4,41 +4,53 @@ import '../styles/List.css'
 import Task from "./Task";
 
 
-const List = () => {
-
+const List = (props) => {
 
     const dispatch = useDispatch();
-    const list = useSelector(state => state.listReducer.list)
-    const [listArr, setListArr] = useState(list.tasks)//
-    const listDisplay = list.tasks.map((task, i) => {
+    const listIndex = props.id;
+    const listsArr = useSelector(state => state.listReducer.lists)
+
+    let currentList = listsArr[listIndex]
+    const tasksArr = currentList.tasks
+
+    const tasksDisplay = tasksArr.map((task, i) => {
         return (
-            <Task task={task} key={i} />
+            <Task task={task} key={i} listIndex={listIndex} />
         )
     })
-    const addTask = () => {
-        const input = document.querySelector('input')
-        dispatch({
-            type: 'ADD_TASK', payload:
-            {
-                id: list.tasks.length + 1,
-                to_do: input.value,
-                isDone: false
-            }
 
-        })
+    const addTask = () => {
+
+        const input = document.querySelector(`#add-${listIndex}`)
+        //
+        const newTask = {
+            id: tasksArr.length + 1,
+            to_do: input.value,
+            isDone: false
+        }
+        //
+        const filteredLists = listsArr.filter(list => list.id !== currentList.id)//all the list but the current list displayed.
+
+        currentList = { ...listsArr[listIndex], tasks: [...tasksArr, newTask] } //updating the current list without the deleted task.
+
+        const tempLists = [...filteredLists, currentList].sort((a, b) => a.id - b.id) //rearranging the lists with the new values and sorting them by id.
+        dispatch({ type: 'ADD_TASK', payload: tempLists })//dispatching the lists to the redux store.
+
+
         input.value = ''
     }
+
     return (
         <div className="list-container">
             <div className="list-head">
-                <h2>list name</h2>
+                <h2>{currentList.list_name}</h2>
                 <div>
-                    <input type='text' placeholder='type something to do...'></input>
-                    <button onClick={addTask}>add</button>
+                    <input type='text' placeholder='type something to do...' id={`add-${listIndex}`}></input>
+                    <button onClick={addTask} >add</button>
                 </div>
             </div>
             <div className="list-body">
-                {listDisplay}
+                {tasksDisplay}
             </div>
         </div>
     )

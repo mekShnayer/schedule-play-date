@@ -1,6 +1,6 @@
 
 const initState = {
-   
+
     lists: [
         {
             id: 1,
@@ -34,6 +34,16 @@ const listReducer = (state = initState, action) => {
             }
             break;
         case 'DELETE_TASK':
+            return {
+                ...state,
+                lists: action.payload
+            }
+        case 'ADD_LIST':
+            return {
+                ...state,
+                lists: action.payload
+            }
+        case 'DELETE_LIST':
             return {
                 ...state,
                 lists: action.payload

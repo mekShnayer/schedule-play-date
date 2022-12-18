@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import '../styles/List.css'
+import './List.css'
 import Task from "./Task";
 
 
@@ -9,7 +9,7 @@ const List = (props) => {
     const dispatch = useDispatch();
     const listIndex = props.id;
     const listsArr = useSelector(state => state.listReducer.lists)
-
+    // const id = listIndex + 1;
     let currentList = listsArr[listIndex]
     const tasksArr = currentList.tasks
 
@@ -39,19 +39,25 @@ const List = (props) => {
 
         input.value = ''
     }
+    const deleteList = (id) => {
+        console.log(id)
+        const filteredLists = listsArr.filter(list => list.id != id)
 
+        dispatch({ type: 'DELETE_LIST', payload: filteredLists })
+    }
     return (
         <div className="list-container">
             <div className="list-head">
                 <h2>{currentList.list_name}</h2>
-                <div>
+                <div className="head-input">
                     <input type='text' placeholder='type something to do...' id={`add-${listIndex}`}></input>
-                    <button onClick={addTask} >add</button>
+                    <button onClick={addTask} >Add</button>
                 </div>
             </div>
             <div className="list-body">
                 {tasksDisplay}
             </div>
+            <button onClick={() => deleteList(currentList.id)}>Delete List</button>
         </div>
     )
 

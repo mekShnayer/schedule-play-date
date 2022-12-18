@@ -47,7 +47,6 @@ const Home = () => {
                     {suggestion}
                 </div> */}
             </div>
-
             <div>
                 <Timeline />
                 <button onClick={() => { dispatch({ type: 'CLEAR_LOG_HISTORY' }) }}>Clear History</button>

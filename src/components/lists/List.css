@@ -1,0 +1,74 @@
+.lists-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+    padding: 20px;
+    margin: 10px;
+}
+
+.add-list-container {
+    /* display: ; */
+    position: fixed;
+    top: 10px;
+    left: 10px;
+} 
+
+.list-container {
+    background-color: rgba(240, 248, 255, 0.645);
+    display: flex;
+    border-radius: 20px;
+    flex-direction: column;
+    padding: 20px 20px;
+    margin: 10px 10px;
+    max-width: 200px;
+    align-content: center;
+}
+
+.list-head {
+    /* margin: 10px; */
+    display: flex;
+    margin-bottom: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.head-input {
+    display: flex;
+    align-items: center;
+}
+
+.list-body {
+    /* border: solid; */
+    /* margin: 5px; */
+    /* padding: 5px; */
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+
+}
+
+.list-item {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text {
+    display: flex;
+    align-items: center;
+    text-align: initial;
+    flex-direction: row;
+}
+
+button {
+    border-radius: 10px;
+    border: 0;
+    /* padding: 5px; */
+    background-color: rgba(131, 154, 170, 0.292);
+    margin: 5px;
+    height: 25px;
+}
+input{
+    height: 20px;
+}

@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from 'react-redux'
+import Lists from "../components/lists/Lists";
 import './Profile.css'
 
 const Profile = () => {
     const dispatch = useDispatch()
     const user = useSelector(state => state.loginReducer.user)
     const stateInfo = useSelector(state => state.infoReducer)
-    const localState = useSelector(state=>state) //for local storage
+    const localState = useSelector(state => state) //for local storage
     useEffect(() => {
         console.log('use effect')//
-        return ()=>{localStorage.setItem('state', JSON.stringify(localState))}
+        return () => { localStorage.setItem('state', JSON.stringify(localState)) }
     })
 
     const childInfo = stateInfo.info
@@ -52,12 +53,12 @@ const Profile = () => {
                         id='friend'></input>
                     <button onClick={addFriend}>add friend</button>
                 </div>
-
-
                 <button onClick={save}>save</button>
 
             </div>
-
+            <div className="lists">
+                <Lists />
+            </div>
         </div>
     )
 }

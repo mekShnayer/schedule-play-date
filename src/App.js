@@ -53,8 +53,8 @@ function App() {
           <Route path='/testing' element={<Testing />}></Route>
         </Routes>
       </div>
-      {isLogedIn ? <Header /> : ''
-        // <Logo />
+      {isLogedIn ? <Header /> : 
+        <Logo />
       }
       {/* {isLogedIn ? 'logged in' : 'logged out'} */}
 

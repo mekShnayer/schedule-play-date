@@ -1,8 +1,8 @@
 import React from "react";
-import List from "../components/lists/List";
+import List from "./List";
 import { useDispatch, useSelector } from "react-redux";
 
-const Testing = () => {
+const Lists = () => {
     const dispatch = useDispatch();
     const lists = useSelector(state => state.listReducer.lists)
 
@@ -34,4 +34,4 @@ const Testing = () => {
     )
 }
 
-export default Testing;
+export default Lists;

@@ -1,5 +1,5 @@
 .page {
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     position: absolute;
     justify-content: flex-start;
@@ -8,4 +8,10 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-evenly;
+    width: 100%; */
+    display: flex;
+    position: absolute;
+    min-height: 100vh;
+    justify-content: space-evenly;
+    width: 100%;
 }  

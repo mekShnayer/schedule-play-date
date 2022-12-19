@@ -12,7 +12,7 @@ const ActivityList = () => {
     })
     const activities = useSelector(state => state.activityReducer.activities)
     // localStorage.setItem('activities', JSON.stringify(activities))
-    const activitiesList = activities.length > 0 && <div className="list-container">
+    const activitiesList = activities.length > 0 && <div className="activities-container">
         {activities.map((activity, i) => {
             // console.log('from activity list:', activity)
             return (

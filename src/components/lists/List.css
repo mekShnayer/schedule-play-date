@@ -7,12 +7,17 @@
 }
 
 .add-list-container {
-    /* display: ; */
-    position: fixed;
-    top: 10px;
-    left: 10px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
 } 
-
+.lists-container{
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
 .list-container {
     background-color: rgba(240, 248, 255, 0.645);
     display: flex;
@@ -54,11 +59,14 @@
     align-items: center;
 }
 
-.text {
+.list-text {
     display: flex;
-    align-items: center;
-    text-align: initial;
     flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-align: initial;
+    /* display: flex; */
+    /* align-items: center; */
 }
 
 button {

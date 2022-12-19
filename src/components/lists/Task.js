@@ -30,7 +30,7 @@ const Task = (props) => {
 
     const task =
         <div className="list-item">
-            <div className="text">
+            <div className="list-text">
                 <input type="checkbox" id="item1" name='item1' onClick={() => toggleDone()}></input>
                 <label htmlFor="item1" > {to_do}</label>
             </div>

@@ -21,15 +21,18 @@ const Lists = () => {
         }
         dispatch({ type: 'ADD_LIST', payload: [...lists, newList] })
     }
-   
+
     return (
-        <div className="lists-container">
+        <div className="">
             {/* <List /> */}
             <div className="add-list-container">
                 <input placeholder="list name" id='add-list-input'></input>
                 <button onClick={addList}>Add List</button>
             </div>
-            {listsDisplay}
+            <div className="lists-container">
+                {listsDisplay}
+            </div>
+
         </div>
     )
 }

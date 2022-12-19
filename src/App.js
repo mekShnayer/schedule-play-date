@@ -23,24 +23,20 @@ function App() {
 
   useEffect(() => {
     onlineCheck(state, dispatch)
-  }, [isLogedIn])
+  }, [])
 
   useEffect(() => {
-
+    //when we dismount the component the return function will execute:
     return () => localStorage.setItem('state', JSON.stringify(state))
   })
   return (
     <div className="App">
-      {/* <div className='logo-container'>
-        <Logo />
-      </div> */}
       {isLogedIn ? <Header /> :
         <Logo />
       }
       <div className='page-container'>
         <Routes>
           <Route path='/' element={isLogedIn ? <Home /> : <LoginForm />}></Route>
-          {/* <Route path='/home' element={<Home />}></Route> */}
           <Route path='/about' element={<About />}></Route>
           <Route path='/activity' element={<ActivityPage />}></Route>
           <Route path='/weather' element={<WeatherPage />}></Route>
@@ -48,8 +44,6 @@ function App() {
           <Route path='/testing' element={<Testing />}></Route>
         </Routes>
       </div>
-
-
     </div>
   );
 }

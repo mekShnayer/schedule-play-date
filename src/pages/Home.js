@@ -8,9 +8,10 @@ import Timeline from "../components/Timeline";
 const Home = () => {
     const localstate = useSelector(state => state)//just for the local storage
     const dispatch = useDispatch()
+
     useEffect(() => {
         return () => localStorage.setItem('state', JSON.stringify(localstate))
-    })
+    })//this send all the current information of the state to local storage.
 
     const stateInfo = useSelector(state => state.infoReducer)
     const stateActivities = useSelector(state => state.activityReducer)
@@ -23,7 +24,7 @@ const Home = () => {
     const randomActivity = stateActivities.activities[Math.floor(Math.random() * stateActivities.activities.length)]?.activityName
     const [suggestion, setSuggestion] = useState('')
 
-    const makeMessage = () => {
+    const makeSuggestion = () => {
 
         const friends = friendsList.length > 0 ? true : false;
         const activities = stateActivities.activities.length > 0 ? true : false;
@@ -34,7 +35,7 @@ const Home = () => {
         }
 
     }
-    makeMessage()
+    makeSuggestion()
 
 
     return (
@@ -43,9 +44,6 @@ const Home = () => {
                 <img src={weatherInfo.image_url}></img>
                 {message}   <br></br>
                 {suggestion}
-                {/* <div className="pop-message">
-                    {suggestion}
-                </div> */}
             </div>
             <div>
                 <Timeline />

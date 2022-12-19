@@ -1,10 +1,10 @@
 /* need to make sure the css isnt doubled */
 .page {
     display: flex;
-    position: absolute;
-    min-height: 100vh;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     width: 100%;
+    align-items: stretch;
+    flex-direction: row;
 }
 
 .child-info {
@@ -34,7 +34,8 @@
     align-content: space-around;
     flex-wrap: wrap;
 }
-.add-info{
+
+.add-info {
     width: 130px;
 }
 

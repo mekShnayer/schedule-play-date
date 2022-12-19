@@ -12,7 +12,7 @@
 .timeline-container{
     display: flex;
     flex-direction: column-reverse;
-    /* border: solid; */
-    width: 120%;
+    margin: 0 160px;
+    align-items: center;
 
 }

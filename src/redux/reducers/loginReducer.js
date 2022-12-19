@@ -8,6 +8,11 @@ const initState = {
 
 const loginReducer = (state = initState, action) => {
     switch (action.type) {
+        case 'UPDATE_STATE':
+            return {
+                ...state,
+                isLogedIn: true
+            }
         case 'TOGGLE_LOGIN':
             return {
                 ...state,

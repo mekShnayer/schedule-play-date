@@ -12,9 +12,9 @@ const Header = () => {
                 <Logo />
             </div>
             <NavBar />
-            <div className="user-greeting">
+            {/* <div className="user-greeting">
                 Hello {userName}! Greate to see you again!
-            </div>
+            </div> */}
 
 
 

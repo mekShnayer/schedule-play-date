@@ -13,28 +13,20 @@ import { useEffect } from 'react';
 import Logo from './components/Logo';
 import Header from './components/Header';
 import Testing from './pages/Testing';
+import onlineCheck from './exported-functions/onlineCheck';
+
 
 function App() {
   const state = useSelector(state => state)
   const dispatch = useDispatch()
   const isLogedIn = useSelector(state => state.loginReducer.isLogedIn)
 
-  const onlineCheck = () => {
-    const localState = JSON.parse(localStorage.getItem('state'))
-    // console.log('local state', localState)
-    if (localState) {
-      localState.isLogedIn ? dispatch({ type: 'UPDATE_STATE', payload: { ...localState } }) : localStorage.setItem('state', JSON.stringify(state))
-    } else {
-      localStorage.setItem('state', JSON.stringify(state))
-    }
-  }
   useEffect(() => {
-    onlineCheck()
-  }, [])
+    onlineCheck(state, dispatch)
+  }, [isLogedIn])
 
   useEffect(() => {
 
-    // console.log('unmounting app component. state:', state)
     return () => localStorage.setItem('state', JSON.stringify(state))
   })
   return (
@@ -42,6 +34,9 @@ function App() {
       {/* <div className='logo-container'>
         <Logo />
       </div> */}
+      {isLogedIn ? <Header /> :
+        <Logo />
+      }
       <div className='page-container'>
         <Routes>
           <Route path='/' element={isLogedIn ? <Home /> : <LoginForm />}></Route>
@@ -53,10 +48,7 @@ function App() {
           <Route path='/testing' element={<Testing />}></Route>
         </Routes>
       </div>
-      {isLogedIn ? <Header /> : 
-        <Logo />
-      }
-      {/* {isLogedIn ? 'logged in' : 'logged out'} */}
+
 
     </div>
   );

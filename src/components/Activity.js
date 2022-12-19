@@ -16,6 +16,7 @@ const Activity = (props) => {
     const Done = (id) => {
         //activity name , date and time?, push this to the state and storage to show history
         console.log(id)
+        // alert('Done!')
         const activityDone = {
             name: activities[id - 1].activityName,
             description: activities[id - 1].description,

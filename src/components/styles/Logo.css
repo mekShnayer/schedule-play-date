@@ -1,8 +1,5 @@
 .logo {
     display: flex;
-    position: fixed;
-    top: 17px;
-    padding: 10px;
     color: rgba(0, 22, 130, 0.75);
 }
 

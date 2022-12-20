@@ -26,6 +26,7 @@
     margin: 10px;
 }
 
+
 @keyframes jump {
     0% {
         transform: translate(-50%, -50%) scale(1.25, 0.75);

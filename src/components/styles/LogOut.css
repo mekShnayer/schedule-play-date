@@ -1,4 +1,5 @@
 .log-out {
     display: flex;
     align-items: center;
+    cursor: pointer;
 }

@@ -10,14 +10,15 @@ const weatherFetch = (url, userLocation, dispatch, weatherInfo) => {
         fetch(url).then(res => res.json()).then(data => {
             console.log(data)
             if (data.main.temp != weatherInfo.temperture) {
+                console.log(data.weather[0].main)
                 dispatch({
                     type: 'UPDATE_WEATHERINFO', weatherInfo:
                     {
-                        // image_url: data.main.condition.icon,
+                        image_url:` http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`,
                         temperture: data.main.temp,
                         feel_like: data.main.feels_like,
-                        // text: data.current.condition.text,
-                        // location: data.location.name,
+                        text: data.weather[0].description,
+                        location: data.name,
                         // updateTime: data.location.localtime,
                     }
                 })

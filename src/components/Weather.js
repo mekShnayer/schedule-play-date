@@ -23,10 +23,10 @@ const Weather = () => {
                 <div className="weather-info-container glassmorphism">
                     <p className="glassmorphism-child">  temperture: {temperture}  </p>
                     <p className="glassmorphism-child">  feelt like: {feel_like}  </p>
-                    {/* <p className="glassmorphism-child">   location: {location}  </p> */}
+                    <p className="glassmorphism-child">   location: {location}  </p>
                     {/* <p className="glassmorphism-child">  update time: {updateTime}  </p> */}
-                    {/* <p className="glassmorphism-child">   {text}  </p> */}
-                    {/* <img src={image_url} className="glassmorphism-child" alt='image'></img> */}
+                    <p className="glassmorphism-child">   {text}  </p>
+                    <img src={image_url} className="glassmorphism-child" alt='image'></img>
                 </div> : 'loading...'}
         </div>
     )

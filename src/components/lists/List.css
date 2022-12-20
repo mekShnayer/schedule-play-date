@@ -76,6 +76,7 @@ button {
     background-color: rgba(131, 154, 170, 0.292);
     margin: 5px;
     height: 25px;
+    cursor: pointer;
 }
 input{
     height: 20px;

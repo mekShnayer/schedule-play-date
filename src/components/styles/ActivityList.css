@@ -15,5 +15,5 @@
     /* width: ; */
     /* border: solid; */
     flex-wrap: wrap;
-
+    justify-content: center;
 }

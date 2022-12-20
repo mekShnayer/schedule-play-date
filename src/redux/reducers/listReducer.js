@@ -12,16 +12,16 @@ const initState = {
                 { id: 4, to_do: 'eggs', isDone: false }
             ]
         },
-        {
-            id: 2,
-            list_name: 'To Do',
-            tasks: [
-                { id: 1, to_do: 'buy pillow for gidi', isDone: false },
-                { id: 2, to_do: 'tidy up maayans clothes', isDone: false },
-                { id: 3, to_do: 'fix this list component', isDone: false },
-                { id: 4, to_do: 'make a new site for yuvals ideas ', isDone: false }
-            ]
-        }
+        // {
+        //     id: 2,
+        //     list_name: 'To Do',
+        //     tasks: [
+        //         { id: 1, to_do: 'buy pillow for gidi', isDone: false },
+        //         { id: 2, to_do: 'tidy up maayans clothes', isDone: false },
+        //         { id: 3, to_do: 'fix this list component', isDone: false },
+        //         { id: 4, to_do: 'make a new site for yuvals ideas ', isDone: false }
+        //     ]
+        // }
     ]
 }
 

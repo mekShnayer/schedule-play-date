@@ -17,17 +17,27 @@ import onlineCheck from './exported-functions/onlineCheck';
 
 
 function App() {
-  const state = useSelector(state => state)
   const dispatch = useDispatch()
+  const update = () => {
+    const localState = JSON.parse(localStorage.getItem('state'))
+    console.log('updating up',localState)
+    localState ? dispatch({ type: 'UPDATE_STATE', payload: localState.listReducer.lists }) : console.log('local storage not found')
+  }
+
+
+  const state = useSelector(state => state)
+
   const isLogedIn = useSelector(state => state.loginReducer.isLogedIn)
 
   useEffect(() => {
+    console.log('mounting up')
     onlineCheck(state, dispatch)
+    update();
   }, [])
 
   useEffect(() => {
     //when we dismount the component the return function will execute:
-    return () => localStorage.setItem('state', JSON.stringify(state))
+    return () => { console.log('unmounting app'); localStorage.setItem('state', JSON.stringify(state)) }
   })
   return (
     <div className="App">

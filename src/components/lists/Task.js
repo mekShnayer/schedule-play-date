@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import './List.css'
 
@@ -6,7 +6,13 @@ const Task = (props) => {
     const dispatch = useDispatch()
     const index = props.listIndex
     const { id, to_do, isDone } = props.task;
+    //local state:
+    const localState = useSelector(state => state)
+    useEffect(() => {
+        return () => {console.log('unmounting task'); localStorage.setItem('state', JSON.stringify(localState)) }
+    })
 
+    //
     const [done, setDone] = useState(isDone)
     //
     const lists = useSelector(state => state.listReducer.lists)// all the lists from the redux state

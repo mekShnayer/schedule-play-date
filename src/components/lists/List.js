@@ -1,10 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import './List.css'
 import Task from "./Task";
 
 
 const List = (props) => {
+
+    const localState = useSelector(state => state) //for local storage
+    // console.log('list local state', localState)
+    useEffect(() => {
+        // console.log('use effect')//
+        return () => {localStorage.setItem('state', JSON.stringify(localState)) }
+    })
 
     const dispatch = useDispatch();
     const listIndex = props.id;

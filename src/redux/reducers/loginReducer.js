@@ -11,7 +11,7 @@ const loginReducer = (state = initState, action) => {
         case 'UPDATE_STATE':
             return {
                 ...state,
-                isLogedIn: true
+                isLogedIn:true,
             }
         case 'TOGGLE_LOGIN':
             return {

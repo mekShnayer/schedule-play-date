@@ -26,7 +26,12 @@ const initState = {
 }
 
 const listReducer = (state = initState, action) => {
-    switch (action.type) {
+    switch (action.type) { 
+        case 'UPDATE_STATE':
+            return {
+                ...state,
+                lists:action.payload
+            }
         case 'ADD_TASK':
             return {
                 ...state,

@@ -1,10 +1,11 @@
 /* need to make sure the css isnt doubled */
 .page {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     width: 100%;
     align-items: stretch;
     flex-direction: row;
+    padding:20px;
 }
 
 .child-info {
@@ -41,7 +42,7 @@
 
 .lists {
     display: flex;
-    position: fixed;
+    /* position: fixed; */
     left: 175px;
     top: 93px;
     margin: 10px;

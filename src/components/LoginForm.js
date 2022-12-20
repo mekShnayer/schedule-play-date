@@ -5,7 +5,7 @@ import './styles/LoginForm.css'
 
 
 const LoginForm = () => {
-    const localstate = useSelector(state => state.loginReducer)
+    const localstate = useSelector(state => state)
     useEffect(() => {
         // console.log('unmounting app component. state:', state)
         return () => localStorage.setItem('state', JSON.stringify(localstate))

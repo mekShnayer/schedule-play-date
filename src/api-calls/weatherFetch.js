@@ -8,9 +8,9 @@ const weatherFetch = (url, userLocation, dispatch, weatherInfo) => {
 
     if (userLocation.x != '' && userLocation.y != '') {
         fetch(url).then(res => res.json()).then(data => {
-            console.log(data)
+            // console.log(data)
             if (data.main.temp != weatherInfo.temperture) {
-                console.log(data.weather[0].main)
+                // console.log(data.weather[0].main)
                 dispatch({
                     type: 'UPDATE_WEATHERINFO', weatherInfo:
                     {

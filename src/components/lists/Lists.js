@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import List from "./List";
 import { useDispatch, useSelector } from "react-redux";
 
 const Lists = () => {
     const dispatch = useDispatch();
     const lists = useSelector(state => state.listReducer.lists)
+
+    const localState = useSelector(state => state) //for local storage
+    useEffect(() => {
+        // console.log('use effect')//
+        return () => { localStorage.setItem('state', JSON.stringify(localState)) }
+    })
 
     const listsDisplay = lists.map((list, index) => {
         return (
@@ -24,7 +30,6 @@ const Lists = () => {
 
     return (
         <div className="">
-            {/* <List /> */}
             <div className="add-list-container">
                 <input placeholder="list name" id='add-list-input'></input>
                 <button onClick={addList}>Add List</button>

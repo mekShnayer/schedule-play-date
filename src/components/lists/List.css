@@ -69,15 +69,14 @@
     /* align-items: center; */
 }
 
-button {
+/* button {
     border-radius: 10px;
     border: 0;
-    /* padding: 5px; */
     background-color: rgba(131, 154, 170, 0.292);
     margin: 5px;
     height: 25px;
     cursor: pointer;
-}
-input{
+} */
+/* input{
     height: 20px;
-}
+} */

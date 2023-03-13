@@ -3,7 +3,8 @@ import './Home.css'
 import { useDispatch, useSelector } from 'react-redux'
 import { useEffect } from "react";
 import Timeline from "../components/Timeline";
-
+import weatherInfo from '../components/Weather';
+import Weather from "../components/Weather";
 
 const Home = () => {
     const localstate = useSelector(state => state)//just for the local storage
@@ -39,13 +40,18 @@ const Home = () => {
 
 
     return (
-        <div className="home-page">
-            <div className="message">
-                <img src={weatherInfo.image_url}></img>
-                {message}   <br></br>
-                {suggestion}
+        <div className="page">
+            <div className="message glassmorphism">
+                <div className="message-content">
+                    <p>{message} </p>
+                    <p>{suggestion}</p>
+                </div>
+
+                <div classname="message-weather-content">
+                    <Weather />
+                </div>
             </div>
-            <div>
+            <div className="timeline-container">
                 <Timeline />
                 <button onClick={() => { dispatch({ type: 'CLEAR_LOG_HISTORY' }) }}>Clear History</button>
             </div>

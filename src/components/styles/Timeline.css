@@ -1,20 +1,18 @@
 .log {
     display: flex;
     flex-direction: column;
-    /* border: solid; */
     padding: 20px;
     margin: 10px;
     min-width: 300px;
-    /* width: inherit; */
     border-radius: 10px;
-    background-image: linear-gradient(to top right, rgba(247, 245, 245, 0.969), rgba(246, 232, 232, 0.052), rgba(255, 255, 254, 0.994));
+    background-image: linear-gradient(to top right, rgba(247, 245, 245, 0.598), rgba(246, 232, 232, 0.072), rgba(222, 222, 221, 0.647));
     justify-content: space-around;
 }
 
 .timeline-container {
     display: flex;
     flex-direction: column-reverse;
-    margin: 0 160px;
+    margin: 10px 160px;
     align-items: stretch;
     justify-content: center;
 }

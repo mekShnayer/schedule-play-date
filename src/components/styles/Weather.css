@@ -1,46 +1,20 @@
-
-.weather-component{
-    height: fit-content;
+#weather-component {
+    /* border: solid black 1px; */
     display: flex;
-    position: relative;
-    flex-wrap: wrap;
-}
-.glassmorphism{
-    display: flex;
-    flex-wrap: wrap;
-    padding: 10px;
-    width: fit-content;
-    flex-direction: row;
-    border-color: black;
-    border-style: solid;
-    min-width: 200px;
-    color: #224;
-    max-width: 300px;
-    height: fit-content;
-    border: 1px solid rgba(255, 255, 255, .25);
-    border-radius: 20px;
-    background-color: rgba(205, 204, 200, 0.035);
-    box-shadow: 0 0 10px 1px rgb(0 0 0 / 25%);
-    -webkit-backdrop-filter: blur(5px);
-    backdrop-filter: blur(5px);
-    align-content: center;
     justify-content: space-evenly;
     align-items: center;
+    flex-wrap: wrap;
 }
-.glassmorphism-child {
+
+.weather-info-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
+    width: 100vw;
+    flex-wrap: wrap;
     align-items: center;
-    padding: 10px;
-    width: 90px;
-    height: 85px;
-    border-color: black;
-    border-style: solid;
-    color: #224;
-    max-width: 500px;
-    border: 1px solid rgba(255, 255, 255, .25);
-    border-radius: 10px;
-    background-color: rgba(248, 248, 248, 0.495);
-    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
-    backdrop-filter: blur(10px);
+}
+
+.weather-info {
+    height: 20px;
+    margin: 2px auto;
 }

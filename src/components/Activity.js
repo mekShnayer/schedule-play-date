@@ -1,9 +1,9 @@
 import React from "react";
 import { useDispatch, useSelector } from 'react-redux'
-import './styles/ActivityList.css'
-import { useEffect } from "react";
+import { moment } from "moment"
 
 const Activity = (props) => {
+
     const dispatch = useDispatch()
     const activities = useSelector(state => state.activityReducer.activities)
     const activity = props.activity;
@@ -16,13 +16,15 @@ const Activity = (props) => {
     const Done = (id) => {
         //activity name , date and time?, push this to the state and storage to show history
         console.log(id)
-        // alert('Done!')
+        const getDate = () => {
+            return moment(new Date().getTime()).format("dddd, MMMM Do YYYY, h:mm:ss a")
+        }//currently doesnt work with format- need to check how to use with javascript
         const activityDone = {
             name: activities[id - 1].activityName,
             description: activities[id - 1].description,
-            // id: id,
-            date: JSON.stringify(new Date())
+            date: JSON.stringify(new Date())////need to fix with format
         }
+
         dispatch({ type: 'DONE_ACTIVITY', payload: activityDone })
     }
 

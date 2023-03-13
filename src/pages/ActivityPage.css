@@ -1,7 +1,26 @@
-/* .page {
+/* .add-activity-form-container{
+    border: solid 1px black;
+} */
+.add-activity-form {
     display: flex;
-    justify-content: flex-start;
-    width: 100%;
-    align-items: stretch;
+    padding: 5px;
+}
+
+.activity-form-input {
+    margin: 5px;
+    padding: 5px;
+}
+
+.activities-container {
+    display: flex;
     flex-direction: row;
-}   */
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.activity {
+    display: flex;
+    margin: 20px;
+    width: fit-content;
+    flex-direction: column;
+}

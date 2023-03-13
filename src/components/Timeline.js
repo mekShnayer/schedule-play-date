@@ -14,11 +14,10 @@ const Timeline = () => {
             </div>
         )
     }) : ''
+
     return (
         <div className="timeline-container">
-            {/* Timeline history: */}
             {TimeLog}
-
         </div>
     )
 }

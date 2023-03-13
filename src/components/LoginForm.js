@@ -1,16 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from 'react-redux'
-
 import './styles/LoginForm.css'
-
 
 const LoginForm = () => {
     const localstate = useSelector(state => state)
+    const dispatch = useDispatch()
+
     useEffect(() => {
-        // console.log('unmounting app component. state:', state)
         return () => localStorage.setItem('state', JSON.stringify(localstate))
     })
-    const dispatch = useDispatch()
+
     const [state, setState] = useState({
         user: {
             username: '',
@@ -26,11 +25,10 @@ const LoginForm = () => {
             }
         })
     }
+
     const login = (event) => {
         event.preventDefault();
-        // console.log(state.user)
-        dispatch({ type: 'LOGIN' ,payload:state.user.username})
-
+        dispatch({ type: 'LOGIN', payload: state.user.username })
     }
     return (
         <div className="container">

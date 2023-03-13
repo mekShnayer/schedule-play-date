@@ -1,26 +1,19 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from 'react-redux'
 import { useEffect } from "react";
-const initState = {
-    id: '',
-    activityName: '',
-    description: ''
-}
-
 
 const AddActivity = () => {
-
     const state = useSelector(state => state.activityReducer)
+    const dispatch = useDispatch()
+
     useEffect(() => {
-        // console.log('unmounting app component. state:', state)
         return () => localStorage.setItem('state', JSON.stringify(state))
     })
-    const dispatch = useDispatch()
+
     const [activity, setActivity] = useState({
         activityName: '',
         description: ''
-    }
-    )
+    })
 
     const updateActivity = (event) => {
         setActivity({
@@ -37,32 +30,14 @@ const AddActivity = () => {
             description: ''
         })
     }
-    // const clear = (e) => {
-    //     e.preventDefault();
-    //     setActivity({
-    //         activityName: '',
-    //         description: ''
-    //     })
-    // }
+
     return (
-        <div className="container/card">
-            <div className="header">
-                <h1>Add Activity:</h1>
-            </div>
-            <div className="form-body">
-                <form onSubmit={addActivity}>
-                    <div>
-                        <input type='text' placeholder="activity name" name='activityName' value={activity.activityName} onChange={updateActivity}></input>
-                    </div>
-                    <div>
-                        <input type='text' placeholder="description" name='description' value={activity.description} onChange={updateActivity}></input>
-                    </div>
-                    <div>
-                        <input type='submit' value='Add'></input>
-                        {/* <button onClick={clear}>clear</button> */}
-                    </div>
-                </form>
-            </div >
+        <div className="add-activity-form-container">
+            <form onSubmit={addActivity} className="add-activity-form">
+                <input type='text' placeholder="activity name" name='activityName' value={activity.activityName} onChange={updateActivity} className="activity-form-input"></input>
+                <input type='text' placeholder="description" name='description' value={activity.description} onChange={updateActivity} className="activity-form-input"></input>
+                <input type='submit' value='Add Activity' className="activity-form-input"></input>
+            </form>
         </div >
     )
 }

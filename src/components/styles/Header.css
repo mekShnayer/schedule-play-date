@@ -1,11 +1,8 @@
 .header-container {
     display: flex;
-    height: max-content;
-    width: 100%;
-    padding: 2px;
-    /* background-color: rgba(0, 255, 255, 0.474); */
-    justify-content: center;
-    flex-direction: column;
+    width: 100vw;
+    background-color: rgb(164 224 230 / 79%);
+    justify-content: space-around;
     align-items: center;
 }
 

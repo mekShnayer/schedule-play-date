@@ -1,7 +1,6 @@
 .App {
+  background-image: url('./background_2.png');
   text-align: center;
-  /* background-image: url('./background.png'); */
-  background-color: rgba(145, 175, 130, 0.607);
   min-height: 100vh;
   display: flex;
   align-content: center;
@@ -10,55 +9,60 @@
   flex-wrap: wrap;
   align-items: center;
 }
+
 .page {
   display: flex;
   width: 100vw;
   height: 100vh;
   flex-direction: column;
   padding: 20px;
-  border: solid 1px black;
+  /* border: solid 1px black; */
   align-items: center;
 }
+
 .logo-container {
   display: flex;
   color: rgba(0, 22, 130, 0.75);
   margin-bottom: 5px;
+  margin: 10px;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex: 2;
 }
 
 
-.glassmorphism{ 
+.glassmorphism {
   display: flex;
-  /* flex-wrap: wrap; */
-  /* flex-direction: row; */
   border-color: black;
   border-style: solid;
   color: #224;
   border: 1px solid rgba(255, 255, 255, .25);
   border-radius: 20px;
-  background-color: rgba(231, 228, 214, 0.228);
+  background-color: rgb(218 249 250 / 43%);
   box-shadow: 0 0 10px 1px rgb(0 0 0 / 25%);
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
   align-content: center;
-  justify-content: space-evenly;
-  align-items: center;
+  /* justify-content: space-evenly;
+  align-items: center; */
 }
+
 .glassmorphism-child {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px;
-  border-color: black;
-  border-style: solid;
-  color: #224;
-  border: 1px solid rgba(255, 255, 255, .25);
-  border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.261);
+  padding: 15px;
+  /* border: 1px solid rgba(255, 255, 255, .25); */
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.188);
   box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(10px);
 }
+
 .about {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  padding: 20px;
 }

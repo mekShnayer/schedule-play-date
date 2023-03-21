@@ -1,5 +1,10 @@
-.container {
+.log-in-container {
     display: flex;
     margin: auto;
+    margin-top: 50%;
     flex-direction: column;
+    height: 200px;
+    justify-content: center;
+    padding: 20px;
+    align-items: flex-start;
 }

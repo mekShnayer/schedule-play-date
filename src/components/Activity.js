@@ -30,9 +30,9 @@ const Activity = (props) => {
 
     return (
         <div className="activity glassmorphism" id={activity.id}>
-            <h3> {activity.activityName}</h3>
-            <p> {activity.description}</p>
-            <div>
+            <h3 className="margin-5"> {activity.activityName}</h3>
+            <p className="margin-5"> {activity.description}</p>
+            <div className="activity-buttons-container">
                 <button onClick={() => deleteActivity(activity.id)}>Delete</button>
                 <button onClick={() => Done(activity.id)}>Done!</button>
             </div>

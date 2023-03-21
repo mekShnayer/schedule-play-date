@@ -21,6 +21,11 @@
 .activity {
     display: flex;
     margin: 20px;
-    width: fit-content;
+    /* width: fit-content; */
     flex-direction: column;
+    padding: 20px;
+    width: 150px;
+}
+.margin-5{
+    margin: 5px;
 }

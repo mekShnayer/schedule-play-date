@@ -42,9 +42,9 @@ function App() {
   return (
     <div className="App">
       {isLogedIn ? <Header /> :
-        <Logo />
+       ''
       }
-      <div className='page-container'>
+      <div className='page-container '>
         <Routes>
           <Route path='/' element={isLogedIn ? <Home /> : <LoginForm />}></Route>
           <Route path='/about' element={<About />}></Route>

@@ -5,7 +5,7 @@ const About = () => {
 
     return (
         <div className="page">
-            <div className="about">
+            <div className="about glassmorphism">
                 <h1>About</h1>
                 <p>This App was created to manage your day as a parent.</p>
                 <p>It tells you if the weather is nice and if you should schedule a play-date or maybe play outside.</p>

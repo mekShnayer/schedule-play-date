@@ -16,7 +16,7 @@ const Timeline = () => {
     }) : ''
 
     return (
-        <div className="timeline-container">
+        <div className="timeline-log-container">
             {TimeLog}
         </div>
     )

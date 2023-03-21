@@ -21,11 +21,12 @@ const Weather = () => {
         <div id="weather-component">
             {weatherInfo.temperture !== '' ?
                 <div className="weather-info-container ">
+                    
                     <p className="glassmorphism-child weather-info">  temperture: {temperture}  </p>
                     <p className="glassmorphism-child weather-info">  feelt like: {feel_like}  </p>
                     <p className="glassmorphism-child weather-info">   location: {location}  </p>
                     <p className="glassmorphism-child weather-info">   {text}  </p>
-                    <img src={image_url} className="glassmorphism-child weather-info" alt='image'></img>
+                    <img src={image_url} className="glassmorphism-child weather-info" alt='image' id="weather-image"></img>
                 </div> : 'loading...'}
         </div>
     )

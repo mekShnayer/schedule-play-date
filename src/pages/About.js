@@ -7,10 +7,25 @@ const About = () => {
         <div className="page">
             <div className="about glassmorphism">
                 <h1>About</h1>
-                <p>This App was created to manage your day as a parent.</p>
-                <p>It tells you if the weather is nice and if you should schedule a play-date or maybe play outside.</p>
-                <p>You can add lists of things you want to do or buy or even people to hang out with.</p>
-                <p>Next update you will be able to see near parks you can go out to, or indoors playgrounds when it rains.</p>
+                <p>My name is Shani and I created this app in inspiration to bring together a community.
+                </p>
+                <p> As a young parent I found myself searching to meet other parents and share experience together. I searched for knowledge everywhere asking how to be the best parent I can be. I follow so many experts in child development online and I wanted to gather this life into one ultimate space.</p>
+                <p>So on that note - I give you a site you can:
+                </p>
+                <ul>
+                    <li>Add your child information (name,age, friends list)</li>
+                    <li>Add activities you and your kid enjoy </li>
+                    <li>check the weather to see if its best to stay home or play outside</li>
+                    <li>See time log of the activities you have already done</li>
+                    <li>Add to do lists to manage your day</li>
+                </ul>
+                <p>upcomming fitures:</p>
+                <un>
+
+                    <li>Chat - get to know the other moms and dads in your community</li>
+                    <li>information page - with articles and advices</li>
+                </un>
+
             </div>
         </div>
 

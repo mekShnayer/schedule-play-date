@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from 'react-redux'
 import Lists from "../components/lists/Lists";
 import './Profile.css'
+import AddActivity from "../components/AddActivity";
+import ActivityList from "../components/ActivityList";
 
 const Profile = () => {
     const dispatch = useDispatch()
@@ -64,8 +66,13 @@ const Profile = () => {
 
                 </div>
             </div>
-
+            <div className="activities">
+                <h3>Activities</h3>
+                <AddActivity />
+                <ActivityList />
+            </div>
             <div className="lists">
+                <h3>Lists</h3>
                 <Lists />
             </div>
         </div>

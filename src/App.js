@@ -49,9 +49,7 @@ function App() {
           <Route path='/' element={isLogedIn ? <Home /> : <LoginForm />}></Route>
           <Route path='/about' element={<About />}></Route>
           <Route path='/activity' element={<ActivityPage />}></Route>
-          <Route path='/weather' element={<WeatherPage />}></Route>
           <Route path='/profile' element={<Profile />}></Route>
-          <Route path='/testing' element={<Testing />}></Route>
         </Routes>
       </div>
     </div>

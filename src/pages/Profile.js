@@ -39,7 +39,7 @@ const Profile = () => {
     }
     return (
         <div className="page">
-            <div className="child-info">
+            <div className="child-info profile-section">
                 <div className="info-container">
                     <div className="greet">
                         <h4 >Hello {user.userName}</h4>
@@ -66,12 +66,12 @@ const Profile = () => {
 
                 </div>
             </div>
-            <div className="activities">
+            <div className="activities profile-section">
                 <h3>Activities</h3>
                 <AddActivity />
                 <ActivityList />
             </div>
-            <div className="lists">
+            <div className="lists profile-section">
                 <h3>Lists</h3>
                 <Lists />
             </div>

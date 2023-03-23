@@ -8,6 +8,8 @@
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
+  background-size: cover;
+  overflow: scroll;
 }
 
 .page {
@@ -65,4 +67,19 @@
   flex-direction: column;
   align-items: flex-start;
   padding: 20px;
+  margin: 40px;
+  margin-top: 0;
+  text-align: start;
+}
+
+#photo-of-me {
+  width: 200px;
+  border-radius: 10px;
+}
+
+.features {
+  display: flex;
+}
+h4{
+  text-decoration: underline;
 }

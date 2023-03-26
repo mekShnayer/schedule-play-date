@@ -5,8 +5,9 @@
     margin: 10px;
     min-width: 300px;
     border-radius: 10px;
-    background-image: linear-gradient(to top right, rgba(247, 245, 245, 0.598), rgba(246, 232, 232, 0.072), rgba(222, 222, 221, 0.647));
+    /* background-image: linear-gradient(to top right, rgba(247, 245, 245, 0.598), rgba(246, 232, 232, 0.072), rgba(222, 222, 221, 0.647)); */
     justify-content: space-around;
+    background-image: linear-gradient(to top right, rgb(247 245 245), rgb(246 232 232 / 60%), #fff)
 }
 
 .timeline-container {

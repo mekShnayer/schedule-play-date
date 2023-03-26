@@ -4,7 +4,7 @@ import ActivityList from "../components/ActivityList";
 import AddActivity from "../components/AddActivity";
 import './ActivityPage.css';
 import { useEffect } from "react";
-
+import { Link } from "react-router-dom";
 
 const ActivityPage = () => {
     const state = useSelector(state => state.activityReducer)
@@ -13,9 +13,15 @@ const ActivityPage = () => {
     })
     return (
         <div className="page">
-            <AddActivity />
-            <ActivityList />
-
+             <div className="profile-section-nav">
+                <Link to={'/profile/lists'} className='navbar-brand'> Lists</Link>
+                <Link to={'/profile'} className='navbar-brand'> info</Link>
+            </div>
+            <div className="activities ">
+                <h3>Activities</h3>
+                <AddActivity />
+                <ActivityList />
+            </div>
         </div>
     )
 }

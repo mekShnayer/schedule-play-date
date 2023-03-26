@@ -4,6 +4,7 @@ import Lists from "../components/lists/Lists";
 import './Profile.css'
 import AddActivity from "../components/AddActivity";
 import ActivityList from "../components/ActivityList";
+import { Link } from "react-router-dom";
 
 const Profile = () => {
     const dispatch = useDispatch()
@@ -39,6 +40,12 @@ const Profile = () => {
     }
     return (
         <div className="page">
+            <div className="profile-section-nav">
+                <Link to={'/profile/activities'} className='navbar-brand'> activities</Link>
+                <Link to={'/profile/lists'} className='navbar-brand'> Lists</Link>
+            </div>
+
+
             <div className="child-info profile-section">
                 <div className="info-container">
                     <div className="greet">
@@ -57,25 +64,14 @@ const Profile = () => {
                     <h4>Add Child Info</h4>
                     <input className="add-info" placeholder="child name" name='childName' value={info.childName} onChange={updateInput}></input>
                     <input className="add-info" placeholder="age" name='age' value={info.age} onChange={updateInput}></input>
-                    {/* <div className="add-info"> */}
                     <input className="add-info" placeholder="friends" name='friends'
                         id='friend'></input>
                     <button onClick={addFriend}>Add friend</button>
-                    {/* </div> */}
                     <button onClick={save}>Save</button>
-
                 </div>
             </div>
-            <div className="activities profile-section">
-                <h3>Activities</h3>
-                <AddActivity />
-                <ActivityList />
-            </div>
-            <div className="lists profile-section">
-                <h3>Lists</h3>
-                <Lists />
-            </div>
-        </div>
+
+        </div >
     )
 }
 

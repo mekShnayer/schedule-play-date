@@ -11,7 +11,10 @@
     width: 140px;
 }
 
-
+.profile-section-nav{
+    position: absolute;
+    left: 5px;
+}
 
 .add-child-info-container {
     display: flex;

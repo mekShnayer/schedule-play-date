@@ -1,5 +1,5 @@
 .App {
-  background-image: url('./background_2.png');
+  /* background-image: url('./background_2.png'); */
   text-align: center;
   min-height: 100vh;
   display: flex;
@@ -9,13 +9,14 @@
   flex-wrap: wrap;
   align-items: center;
   background-size: cover;
-  overflow: scroll;
+  background: #eceaff;
+  /* overflow: scroll; */
 }
 
 .page {
   display: flex;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   flex-direction: column;
   padding: 20px;
   /* border: solid 1px black; */

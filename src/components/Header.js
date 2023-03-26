@@ -3,13 +3,15 @@ import { useSelector } from "react-redux";
 import NavBar from "../routing/NavBar";
 import './styles/Header.css'
 import Logo from "./Logo";
+import Menu from "../routing/Menu";
 const Header = () => {
     return (
         <div className="header-container">
-            <div className='logo-container'>
+            <Menu />
+            {/* <div className='logo-container'>
                 <Logo />
             </div>
-            <NavBar />
+            <NavBar /> */}
         </div>
     )
 }

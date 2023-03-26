@@ -14,6 +14,7 @@ import Logo from './components/Logo';
 import Header from './components/Header';
 import Testing from './pages/Testing';
 import onlineCheck from './exported-functions/onlineCheck';
+import Lists from './components/lists/Lists';
 
 
 function App() {
@@ -48,8 +49,10 @@ function App() {
         <Routes>
           <Route path='/' element={isLogedIn ? <Home /> : <LoginForm />}></Route>
           <Route path='/about' element={<About />}></Route>
-          <Route path='/activity' element={<ActivityPage />}></Route>
+          <Route path='/profile/activities' element={<ActivityPage />}></Route>
           <Route path='/profile' element={<Profile />}></Route>
+          <Route path='/profile/lists' element={<Lists />}></Route>
+          <Route path='/testing' element={<Testing />}></Route>
         </Routes>
       </div>
     </div>

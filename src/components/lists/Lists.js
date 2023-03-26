@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import List from "./List";
 import { useDispatch, useSelector } from "react-redux";
-
+import { Link } from "react-router-dom";
 const Lists = () => {
     const dispatch = useDispatch();
     const lists = useSelector(state => state.listReducer.lists)
@@ -29,7 +29,12 @@ const Lists = () => {
     }
 
     return (
-        <div className="">
+        <div>
+             <div className="profile-section-nav">
+                <Link to={'/profile/activities'} className='navbar-brand'> activities</Link>
+                <Link to={'/profile'} className='navbar-brand'> info</Link>
+            </div>
+            <h3>Lists</h3>
             <div className="add-list-container">
                 <input placeholder="list name" id='add-list-input'></input>
                 <button onClick={addList}>Add List</button>

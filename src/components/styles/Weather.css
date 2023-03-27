@@ -1,23 +1,28 @@
 #weather-component {
     display: flex;
-    justify-content: space-evenly;
+    /* justify-content: space-evenly;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: wrap; */
 }
 
 .weather-info-container {
     display: flex;
-    padding: 10px;
-    flex-wrap: wrap;
-    justify-content: center;
-    flex-direction: column;
-    align-items: stretch;
-    padding-top: 0;
+    justify-content: space-evenly;
+    width: 100vw;
+    font-size: small;
+    height: 30px;
+    align-items: center;
+    background: #ffe3e3;
 }
 
-.weather-info {
+/* .weather-info {
     height: 20px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+
 }
-#weather-image{
+
+#weather-image {
     height: auto;
-}
+} */

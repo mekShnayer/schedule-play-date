@@ -12,11 +12,8 @@ const ActivityPage = () => {
         return () => localStorage.setItem('state', JSON.stringify(state))
     })
     return (
-        <div className="page">
-             <div className="profile-section-nav">
-                <Link to={'/profile/lists'} className='navbar-brand'> Lists</Link>
-                <Link to={'/profile'} className='navbar-brand'> info</Link>
-            </div>
+        <div>
+             
             <div className="activities ">
                 <h3>Activities</h3>
                 <AddActivity />

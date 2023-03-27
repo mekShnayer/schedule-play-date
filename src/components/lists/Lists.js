@@ -30,10 +30,7 @@ const Lists = () => {
 
     return (
         <div>
-             <div className="profile-section-nav">
-                <Link to={'/profile/activities'} className='navbar-brand'> activities</Link>
-                <Link to={'/profile'} className='navbar-brand'> info</Link>
-            </div>
+             
             <h3>Lists</h3>
             <div className="add-list-container">
                 <input placeholder="list name" id='add-list-input'></input>

@@ -42,14 +42,14 @@ const Home = () => {
     return (
         <div className="page">
             <div className="message glassmorphism">
-                <div className="message-content">
+                {/* <div className="message-content">
                     <p>{message} </p>
                     <p>{suggestion}</p>
-                </div>
+                </div> */}
 
-                <div classname="message-weather-content">
+                {/* <div classname="message-weather-content">
                     <Weather />
-                </div>
+                </div> */}
             </div>
             <div className="timeline-container">
                 <Timeline />

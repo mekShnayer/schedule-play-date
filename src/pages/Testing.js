@@ -1,14 +1,14 @@
 import React from "react";
 import List from "../components/lists/List";
 import { useDispatch, useSelector } from "react-redux";
-import Menu from '../routing/Menu'
+import PlusMenu from '../routing/PlusMenu'
 import './Testing.css'
 const Testing = () => {
 
 
     return (
         <div >
-           <Menu/>
+           <PlusMenu/>
         </div>
     )
 }

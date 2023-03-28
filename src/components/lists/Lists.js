@@ -29,7 +29,7 @@ const Lists = () => {
     }
 
     return (
-        <div>
+        <div className="lists">
              
             <h3>Lists</h3>
             <div className="add-list-container">

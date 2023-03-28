@@ -13,10 +13,10 @@ const Timeline = () => {
                 <span>  {log.date}</span>
             </div>
         )
-    }) : ''
+    }) : 'no activities has been logged'
 
     return (
-        <div className="timeline-log-container">
+        <div className="timeline-log-container ">
             {TimeLog}
         </div>
     )

@@ -15,12 +15,20 @@
 
 .page {
   display: flex;
-  width: 100vw;
-  min-height: 100vh;
+  top: 104px;
+  left: 280px;
+  position: absolute;
+  /* border: solid; */
+  width: 66vw;
+  height: 73vh;
   flex-direction: column;
   padding: 20px;
-  /* border: solid 1px black; */
   align-items: center;
+  overflow-y: hidden;
+}
+
+.page:hover {
+  overflow-y: scroll;
 }
 
 .logo-container {
@@ -34,7 +42,7 @@
   flex: 2;
 }
 
-/* 
+
 .glassmorphism {
   display: flex;
   border-color: black;
@@ -49,6 +57,7 @@
   align-content: center;
 }
 
+/*
 .glassmorphism-child {
   display: flex;
   justify-content: center;
@@ -70,6 +79,25 @@
   text-align: start;
 }
 
+.page::-webkit-scrollbar {
+  width: 10px;
+
+}
+
+/* Track */
+.page::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 20px;
+}
+
+/* Handle */
+.page::-webkit-scrollbar-thumb {
+  background: rgba(181, 173, 173, 0.565);
+  border-radius: 5px;
+}
+.page::-webkit-scrollbar-thumb:hover {
+  background: #7a7878; 
+}
 #photo-of-me {
   width: 200px;
   border-radius: 10px;
@@ -78,6 +106,7 @@
 .features {
   display: flex;
 }
-h4{
+
+h4 {
   text-decoration: underline;
 }

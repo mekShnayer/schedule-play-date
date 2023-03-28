@@ -13,7 +13,8 @@
 .timeline-container {
     display: flex;
     flex-direction: column-reverse;
-    margin: 10px 160px;
-    align-items: stretch;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    min-width: 320px;
+    min-height: 200px;
 }

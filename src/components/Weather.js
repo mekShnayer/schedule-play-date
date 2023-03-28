@@ -22,10 +22,10 @@ const Weather = () => {
             {weatherInfo.temperture !== '' ?
                 <div className="weather-info-container ">
                     
-                    <p className=" weather-info">  temperture: {temperture}  </p>
-                    <p className=" weather-info">  feelt like: {feel_like}  </p>
-                    <p className=" weather-info">   location: {location}  </p>
-                    <p className=" weather-info">   {text}  </p>
+                    <div className=" weather-info glassmorphism">  temperture: {temperture}  </div>
+                    <div className=" weather-info glassmorphism">  feelt like: {feel_like}  </div>
+                    <div className=" weather-info glassmorphism">   location: {location}  </div>
+                    <div className=" weather-info glassmorphism">   {text}  </div>
                     {/* <img src={image_url} className="glassmorphism-child weather-info" alt='image' id="weather-image"></img> */}
                 </div> : 'loading...'}
         </div>

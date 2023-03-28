@@ -1,10 +1,11 @@
-import React, { useState,useEffect } from "react";
-import { useSelector ,useDispatch} from "react-redux";
+import React, { useState, useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import NavBar from "../routing/NavBar";
 import Weather from "./Weather";
 import './styles/Header.css'
 import Logo from "./Logo";
 import Menu from "../routing/Menu";
+import SideMenu from "../routing/SideMenu";
 
 
 
@@ -46,7 +47,9 @@ const Header = () => {
                 <p>{message} </p>
                 <p>{suggestion}</p>
             </div> */}
-            <Weather />
+
+            {/* <Weather /> */}
+            <SideMenu />
         </div>
     )
 }

@@ -27,17 +27,9 @@
     width: 130px;
 }
 .profile-section{
-    border: solid;
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
-    flex: 1;
-}
-.lists {
-    display: flex;
-    left: 175px;
-    top: 93px;
-    margin: 10px;
+    flex-direction: row;
+    max-width: 600px;
+    height: 250px;
+    overflow: hidden;
 }

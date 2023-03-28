@@ -5,6 +5,9 @@ import { useEffect } from "react";
 import Timeline from "../components/Timeline";
 import weatherInfo from '../components/Weather';
 import Weather from "../components/Weather";
+import PlusMenu from '../routing/PlusMenu'
+import { Link } from "react-router-dom";
+
 
 const Home = () => {
     const localstate = useSelector(state => state)//just for the local storage
@@ -40,18 +43,14 @@ const Home = () => {
 
 
     return (
-        <div className="page">
-            <div className="message glassmorphism">
-                {/* <div className="message-content">
-                    <p>{message} </p>
-                    <p>{suggestion}</p>
-                </div> */}
-
-                {/* <div classname="message-weather-content">
-                    <Weather />
-                </div> */}
+        <div className="">
+            <div className="message-content">
+                <p>{message} </p>
+                <p>{suggestion}</p>
             </div>
-            <div className="timeline-container">
+
+            <Weather />
+            <div className="timeline-container glassmorphism">
                 <Timeline />
                 <button onClick={() => { dispatch({ type: 'CLEAR_LOG_HISTORY' }) }}>Clear History</button>
             </div>

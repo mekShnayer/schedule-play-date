@@ -21,7 +21,7 @@ function App() {
   const dispatch = useDispatch()
   const update = () => {
     const localState = JSON.parse(localStorage.getItem('state'))
-    console.log('updating up',localState)
+    console.log('updating up', localState)
     localState ? dispatch({ type: 'UPDATE_STATE', payload: localState.listReducer.lists }) : console.log('local storage not found')
   }
 
@@ -43,19 +43,19 @@ function App() {
   return (
     <div className="App">
       {isLogedIn ? <Header /> :
-       ''
+        ''
       }
-      <div className='page-container '>
-        <Routes>
-          <Route path='/' element={isLogedIn ? <Home /> : <LoginForm />}></Route>
-          <Route path='/about' element={<About />}></Route>
-          <Route path='/profile/activities' element={<ActivityPage />}></Route>
-          <Route path='/profile' element={<Profile />}></Route>
-          <Route path='/profile/lists' element={<Lists />}></Route>
-          <Route path='/testing' element={<Testing />}></Route>
-        </Routes>
-      </div>
+      <div className='page '>
+      <Routes>
+        <Route path='/' element={isLogedIn ? <Home /> : <LoginForm />}></Route>
+        <Route path='/about' element={<About />}></Route>
+        <Route path='/activities' element={<ActivityPage />}></Route>
+        <Route path='/profile' element={<Profile />}></Route>
+        <Route path='/lists' element={<Lists />}></Route>
+        <Route path='/testing' element={<Testing />}></Route>
+      </Routes>
     </div>
+     </div>
   );
 }
 

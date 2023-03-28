@@ -4,6 +4,8 @@
     background-color: rgb(164 224 230 / 79%);
     justify-content: space-around;
     align-items: center;
+    flex-direction: column;
+    position: fixed;
 }
 
 .user-greeting {

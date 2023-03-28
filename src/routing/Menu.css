@@ -1,6 +1,7 @@
 .menu {
     width: 100%;
     /* min-height: 100vh; */
+    /* z-index: 1; */
     background: #eceaff;
     color: #525252;
     min-width: 100vw;

@@ -4,7 +4,7 @@ import Logo from '../components/Logo'
 import { useDispatch } from "react-redux";
 import './Menu.css'
 import { Link } from "react-router-dom";
-
+import Weather from "../components/Weather";
 const Menu = () => {
     const dispatch = useDispatch()
     let subMenu = document.getElementById('subMenu')
@@ -18,10 +18,13 @@ const Menu = () => {
         <div className="menu">
             <nav>
                 <Logo />
+                    {/* <Weather /> */}
+                
+
                 <ul>
-                    <li><Link to='/'>Home</Link></li>
-                    <li><Link to="/profile">Profile</Link></li>
-                    <li><Link to="/about">About</Link></li>
+                    {/* <li><Link to='/'>Home</Link></li> */}
+                    {/* <li><Link to="/profile">Profile</Link></li> */}
+                    {/* <li><Link to="/about">About</Link></li> */}
                     <li><Link to="/#">Contact</Link></li>
                     <li><Link to="/testing">Testing</Link></li>
                 </ul>

@@ -1,4 +1,4 @@
-.message {
+/* .message {
   display: flex;
   flex-direction: column;
   font-style: oblique;
@@ -6,4 +6,11 @@
   padding: 10px;
   position: absolute;
   left: 10px;
+} */
+
+
+.message-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }

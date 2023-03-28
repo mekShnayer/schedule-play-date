@@ -4,7 +4,7 @@ import me from '../me.jpeg'
 const About = () => {
 
     return (
-        <div className="page">
+        <div className="">
             <div className="about glassmorphism">
                 <h1>About</h1>
                 <p>My name is Shani and I created this app in inspiration to bring together a community.<br></br>

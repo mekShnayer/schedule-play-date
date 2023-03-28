@@ -16,11 +16,8 @@ const Profile = () => {
 
 
     return (
-        <div className="page">
-            {/* <div className="profile-section-nav">
-                <Link to={'/profile/activities'} className='navbar-brand'> activities</Link>
-                <Link to={'/profile/lists'} className='navbar-brand'> Lists</Link>
-            </div> */}
+        <div className="">
+            
             <ActivityPage />
             <Lists />
             <ChildInfo />

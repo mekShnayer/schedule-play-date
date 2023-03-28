@@ -1,7 +1,13 @@
 
 
 const initState = {
-    activities: [],
+    activities: [{
+        activityName: 'Shopping',
+        description: 'Buying summer clothes'
+    },{
+        activityName: 'Play Date!',
+        description: 'With David and Daniel'
+    }],
     timeline: []
 }
 

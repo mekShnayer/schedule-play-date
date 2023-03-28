@@ -1,14 +1,21 @@
 
-
+.info-container{
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 50%;
+}
 .child-info {
-    border: solid;
+    /* border: solid; */
     display: flex;
     flex-direction: column;
     position: sticky;
     left: 0;
     margin: 5px;
     padding: 10px;
-    width: 140px;
+    /* width: 140px; */
 }
 
 .profile-section-nav{
@@ -18,9 +25,11 @@
 
 .add-child-info-container {
     display: flex;
-    flex-direction: row;
-    align-content: space-around;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: stretch;
+    align-items: stretch;
+    justify-content: center;
+    padding: 20px;
 }
 
 .add-info {
@@ -31,5 +40,6 @@
     flex-direction: row;
     max-width: 600px;
     height: 250px;
-    overflow: hidden;
+    justify-content: space-evenly;
+    /* overflow: hidden; */
 }

@@ -18,8 +18,6 @@ const Menu = () => {
         <div className="menu">
             <nav>
                 <Logo />
-                    {/* <Weather /> */}
-                
 
                 <ul>
                     {/* <li><Link to='/'>Home</Link></li> */}

@@ -35,6 +35,7 @@ const Activity = (props) => {
             <div className="activity-buttons-container">
                 <button onClick={() => deleteActivity(activity.id)}>Delete</button>
                 <button onClick={() => Done(activity.id)}>Done!</button>
+                {/* cant push this button */}
             </div>
 
         </div>

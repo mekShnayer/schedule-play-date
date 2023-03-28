@@ -2,9 +2,11 @@
 
 const initState = {
     activities: [{
+        id:1,
         activityName: 'Shopping',
         description: 'Buying summer clothes'
     },{
+        id:2,
         activityName: 'Play Date!',
         description: 'With David and Daniel'
     }],

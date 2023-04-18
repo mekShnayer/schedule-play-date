@@ -1,8 +1,6 @@
 
 import './App.css';
-import WeatherPage from './pages/WeatherPage';
 import Home from './pages/Home';
-import './background.png';
 import { Route, Routes } from 'react-router-dom';
 import ActivityPage from './pages/ActivityPage';
 import About from './pages/About';
@@ -10,7 +8,6 @@ import Profile from './pages/Profile';
 import LoginForm from './components/LoginForm';
 import { useSelector, useDispatch } from 'react-redux'
 import { useEffect } from 'react';
-import Logo from './components/Logo';
 import Header from './components/Header';
 import Testing from './pages/Testing';
 import onlineCheck from './exported-functions/onlineCheck';
@@ -24,7 +21,6 @@ function App() {
     console.log('updating up', localState)
     localState ? dispatch({ type: 'UPDATE_STATE', payload: localState.listReducer.lists }) : console.log('local storage not found')
   }
-
 
   const state = useSelector(state => state)
 

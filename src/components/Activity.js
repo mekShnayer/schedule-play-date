@@ -14,15 +14,17 @@ const Activity = (props) => {
     }
 
     const Done = (id) => {
-        //activity name , date and time?, push this to the state and storage to show history
         console.log(id)
         const getDate = () => {
-            return moment(new Date().getTime()).format("dddd, MMMM Do YYYY, h:mm:ss a")
-        }//currently doesnt work with format- need to check how to use with javascript
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
+            let now = new Date()
+            let time_message = `${now.toLocaleDateString("en-US", options)} ${now.toLocaleTimeString()}`
+            return time_message
+        }
         const activityDone = {
             name: activities[id - 1].activityName,
             description: activities[id - 1].description,
-            date: JSON.stringify(new Date())////need to fix with format
+            date:getDate()
         }
 
         dispatch({ type: 'DONE_ACTIVITY', payload: activityDone })
@@ -35,7 +37,6 @@ const Activity = (props) => {
             <div className="activity-buttons-container">
                 <button onClick={() => deleteActivity(activity.id)}>Delete</button>
                 <button onClick={() => Done(activity.id)}>Done!</button>
-                {/* cant push this button */}
             </div>
 
         </div>

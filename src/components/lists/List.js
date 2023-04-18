@@ -2,21 +2,18 @@ import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import './List.css'
 import Task from "./Task";
-
+import delete_icon from './delete_icon.png'
 
 const List = (props) => {
 
-    const localState = useSelector(state => state) //for local storage
-    // console.log('list local state', localState)
+    const localState = useSelector(state => state)
     useEffect(() => {
-        // console.log('use effect')//
         return () => {localStorage.setItem('state', JSON.stringify(localState)) }
     })
 
     const dispatch = useDispatch();
     const listIndex = props.id;
     const listsArr = useSelector(state => state.listReducer.lists)
-    // const id = listIndex + 1;
     let currentList = listsArr[listIndex]
     const tasksArr = currentList.tasks
 
@@ -57,14 +54,18 @@ const List = (props) => {
             <div className="list-head">
                 <h2>{currentList.list_name}</h2>
                 <div className="head-input">
-                    <input type='text' placeholder='type something to do...' id={`add-${listIndex}`}></input>
-                    <button onClick={addTask} >Add</button>
+                    <input className="add-task-input" type='text' placeholder='type something to do...' id={`add-${listIndex}`} ></input>
+                    <button onClick={addTask} className="add-task-button">ADD</button>
                 </div>
             </div>
             <div className="list-body">
                 {tasksDisplay}
             </div>
-            <button onClick={() => deleteList(currentList.id)}>Delete List</button>
+            <div className="tooltip">
+              <img className="delete-list-icon" src={delete_icon} width="30px" onClick={() => deleteList(currentList.id)}></img>
+              <span className="tooltip-text">Delete list</span>
+            </div>
+             
         </div>
     )
 

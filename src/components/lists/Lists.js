@@ -34,7 +34,7 @@ const Lists = () => {
             <h3>Lists</h3>
             <div className="add-list-container">
                 <input placeholder="list name" id='add-list-input'></input>
-                <button onClick={addList}>Add List</button>
+                <button onClick={addList}>Add</button>
             </div>
             <div className="lists-container">
                 {listsDisplay}

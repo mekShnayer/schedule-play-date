@@ -1,7 +1,5 @@
 import React from "react";
 import './styles/Logo.css'
-import rain from '../rain.jpg';
-import sunny from '../sunny.png';
 import { useSelector } from "react-redux";
 const Logo = () => {
     const weather = useSelector(state => state.weatherReducer.weatherInfo)

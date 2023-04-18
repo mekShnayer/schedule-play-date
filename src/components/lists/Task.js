@@ -6,44 +6,37 @@ const Task = (props) => {
     const dispatch = useDispatch()
     const index = props.listIndex
     const { id, to_do, isDone } = props.task;
-    //local state:
     const localState = useSelector(state => state)
     useEffect(() => {
-        return () => {console.log('unmounting task'); localStorage.setItem('state', JSON.stringify(localState)) }
+        return () => { console.log('unmounting task'); localStorage.setItem('state', JSON.stringify(localState)) }
     })
 
     //
     const [done, setDone] = useState(isDone)
     //
-    const lists = useSelector(state => state.listReducer.lists)// all the lists from the redux state
+    const lists = useSelector(state => state.listReducer.lists)
     let currentList = lists[index]
 
     const toggleDone = () => {
         setDone(!done)
-        // console.log(done)
     }
     const deleteTask = (id) => {
-        const filteredLists = lists.filter(list => list.id !== currentList.id)//all the list but the current list displayed.
-        // arr.sort((a,b)=>a.id-b.id) // sorting array by index from low to high.
-        const filteredTask = currentList.tasks.filter(task => task.id !== id); //filtering the deleted task from the task array.
-        currentList = { ...lists[index], tasks: filteredTask } //updating the current list without the deleted task.
+        const filteredLists = lists.filter(list => list.id !== currentList.id)
+        const filteredTask = currentList.tasks.filter(task => task.id !== id); 
+        currentList = { ...lists[index], tasks: filteredTask }
 
-        const tempLists = [...filteredLists, currentList].sort((a, b) => a.id - b.id) //rearranging the lists with the new values and sorting them by id.
-        dispatch({ type: 'DELETE_TASK', payload: tempLists })//dispatching the lists to the redux store.
-
-
+        const tempLists = [...filteredLists, currentList].sort((a, b) => a.id - b.id)
+        dispatch({ type: 'DELETE_TASK', payload: tempLists })
     }
 
     const task =
-        <div className="list-item">
-            <div className="list-text">
-                <input type="checkbox" id="item1" name='item1' onClick={() => toggleDone()}></input>
+        <div className="list-item tooltip">
+            <div className="list-text ">
+                <input type="checkbox" id="checkbox-1-1" class="regular-checkbox" onClick={() => toggleDone()} />
                 <label htmlFor="item1" > {to_do}</label>
             </div>
-            <button onClick={() => deleteTask(id)}>X</button>
-        </div>
-
-
+            <span className="tooltip-text" onClick={() => deleteTask(id)}>Delete</span>
+        </div >
 
     return (
         <div className="list-item">

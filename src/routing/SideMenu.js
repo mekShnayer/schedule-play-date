@@ -42,7 +42,7 @@ const SideMenu = () => {
                         <img src={activity_icon} alt="help" className="icons"></img>
                         <p>Activities</p>
                     </Link>
-
+{/* 
                     <Link to='/' className="side-menu-link">
                         <img src={friends_icon} alt="help" className="icons"></img>
                         <p>Friends</p>
@@ -56,7 +56,7 @@ const SideMenu = () => {
                     <Link to='/' className="side-menu-link">
                         <img src={me} alt="help" className="icons"></img>
                         <p onClick={() => { }}>.. food recipes, locations.. etc</p>
-                    </Link>
+                    </Link> */}
 
 
                 </div>

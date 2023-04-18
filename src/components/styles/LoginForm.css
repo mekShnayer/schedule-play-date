@@ -1,10 +1,8 @@
 .log-in-container {
-    display: flex;
-    margin: auto;
-    margin-top: 50%;
+    position: absolute;
+    left: 70px;
     flex-direction: column;
     height: 200px;
     justify-content: center;
     padding: 20px;
-    align-items: flex-start;
 }

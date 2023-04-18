@@ -1,7 +1,5 @@
 .menu {
     width: 100%;
-    /* min-height: 100vh; */
-    /* z-index: 1; */
     background: #eceaff;
     color: #525252;
     min-width: 100vw;
@@ -9,8 +7,6 @@
 }
 nav {
     background: #e3b8b8;
-    /* width: 100%; */
-    padding: 10px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -28,12 +24,13 @@ nav {
 nav ul {
     width: 100%;
     text-align: right;
+    margin: auto;
 }
 
 nav ul li {
     display: inline-block;
     list-style: none;
-    margin: 10px 20px;
+    margin: 3px 19px;
 }
 
 nav ul li a {

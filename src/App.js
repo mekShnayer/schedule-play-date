@@ -37,7 +37,6 @@ function App() {
   }, [])
 
   useEffect(() => {
-    //when we dismount the component the return function will execute:
     return () => { console.log('unmounting app'); localStorage.setItem('state', JSON.stringify(state)) }
   })
   return (

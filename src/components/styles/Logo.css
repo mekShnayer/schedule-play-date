@@ -1,8 +1,6 @@
 .logo {
     display: flex;
     color: rgba(86, 55, 1, 0.75);
-    width: 260px;
-    padding: 15px;
 }
 
 .text {
@@ -11,6 +9,7 @@
     align-items: center;
     font-size: small;
     justify-content: center;
+    width: 160px;
 }
 
 .ball {

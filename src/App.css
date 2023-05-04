@@ -1,5 +1,4 @@
 .App {
-  /* background-image: url('./background_2.png'); */
   text-align: center;
   min-height: 100vh;
   display: flex;
@@ -10,19 +9,44 @@
   align-items: center;
   background-size: cover;
   background: #eceaff;
-  /* overflow: scroll; */
 }
+.testing {
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+.grid-container {
+  display: grid;
+  grid:min-content 1fr / 15% 1fr;
+  grid-auto-flow: row;
+  gap: 10px;
+  align-items: center;
+  justify-items: center;
+  grid-template-areas: "header header"
+  "sidebar page "
+  
+}
+.grid-item{
+  width: 100%;
+  min-height: 100%;
+  height: fit-content;
+}
+.header-item{
+  grid-area: header;
+  height: min-content;
+}
+.sidebar-item{
+  grid-area: sidebar;
+  height: fit-content;
+}
+.page-item{
+  grid-area: page;
+}
+
 
 .page {
   display: flex;
-  top: 104px;
-  left: 280px;
-  position: absolute;
-  /* border: solid; */
-  width: 66vw;
-  height: 73vh;
   flex-direction: column;
-  padding: 20px;
   align-items: center;
   overflow-y: hidden;
 }
@@ -57,17 +81,6 @@
   align-content: center;
 }
 
-/*
-.glassmorphism-child {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 15px;
-  border-radius: 5px;
-  background-color: rgba(255, 255, 255, 0.188);
-  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(10px);
-} */
 
 .about {
   display: flex;
@@ -84,13 +97,11 @@
 
 }
 
-/* Track */
 .page::-webkit-scrollbar-track {
   box-shadow: inset 0 0 5px grey;
   border-radius: 20px;
 }
 
-/* Handle */
 .page::-webkit-scrollbar-thumb {
   background: rgba(181, 173, 173, 0.565);
   border-radius: 5px;

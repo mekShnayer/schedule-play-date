@@ -1,6 +1,5 @@
 
 import './App.css';
-import Home from './pages/Home';
 import { Route, Routes } from 'react-router-dom';
 import ActivityPage from './pages/ActivityPage';
 import About from './pages/About';
@@ -8,10 +7,12 @@ import Profile from './pages/Profile';
 import LoginForm from './components/LoginForm';
 import { useSelector, useDispatch } from 'react-redux'
 import { useEffect } from 'react';
-import Header from './components/Header';
 import Testing from './pages/Testing';
 import onlineCheck from './exported-functions/onlineCheck';
 import Lists from './components/lists/Lists';
+import HomePage from './pages/HomePage';
+import Menu from './routing/Menu';
+import SideMenu from './routing/SideMenu';
 
 
 function App() {
@@ -37,20 +38,34 @@ function App() {
   })
   return (
     <div className="App">
-      {isLogedIn ? <Header /> :
-        ''
+      {isLogedIn ?
+        <div className="testing grid-container">
+          <div className="grid-item header-item" >
+            <Menu />
+          </div>
+          <div className="grid-item sidebar-item">
+            <SideMenu />
+          </div>
+          <div className="grid-item page-item">
+            <div className='page '>
+              <Routes>
+                <Route path='/' element={<HomePage />}></Route>
+                <Route path='/about' element={<About />}></Route>
+                <Route path='/activities' element={<ActivityPage />}></Route>
+                <Route path='/profile' element={<Profile />}></Route>
+                <Route path='/lists' element={<Lists />}></Route>
+                <Route path='/testing' element={<Testing />}></Route>
+              </Routes>
+            </div>
+
+          </div>
+        </div>
+
+        :
+        <LoginForm />
       }
-      <div className='page '>
-      <Routes>
-        <Route path='/' element={isLogedIn ? <Home /> : <LoginForm />}></Route>
-        <Route path='/about' element={<About />}></Route>
-        <Route path='/activities' element={<ActivityPage />}></Route>
-        <Route path='/profile' element={<Profile />}></Route>
-        <Route path='/lists' element={<Lists />}></Route>
-        <Route path='/testing' element={<Testing />}></Route>
-      </Routes>
+
     </div>
-     </div>
   );
 }
 

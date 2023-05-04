@@ -8,9 +8,10 @@ const List = (props) => {
 
     const localState = useSelector(state => state)
     useEffect(() => {
-        return () => {localStorage.setItem('state', JSON.stringify(localState)) }
+        return () => { localStorage.setItem('state', JSON.stringify(localState)) }
     })
-
+    const [isOpen, toggleIsOpen] = useState(props.opened)
+    console.log(isOpen)
     const dispatch = useDispatch();
     const listIndex = props.id;
     const listsArr = useSelector(state => state.listReducer.lists)
@@ -49,23 +50,32 @@ const List = (props) => {
 
         dispatch({ type: 'DELETE_LIST', payload: filteredLists })
     }
+
     return (
         <div className="list-container">
-            <div className="list-head">
-                <h2>{currentList.list_name}</h2>
-                <div className="head-input">
-                    <input className="add-task-input" type='text' placeholder='type something to do...' id={`add-${listIndex}`} ></input>
-                    <button onClick={addTask} className="add-task-button">ADD</button>
+            {isOpen ? <div>
+                <span className="close-list-span" onClick={() => toggleIsOpen(state => !state)}>-</span>
+                <div className="list-head">
+                    <h2>{currentList.list_name}</h2>
+                    <div className="head-input">
+                        <input className="add-task-input" type='text' placeholder='type something to do...' id={`add-${listIndex}`} ></input>
+                        <button onClick={addTask} className="add-task-button">ADD</button>
+                    </div>
+                </div>
+                <div className="list-body">
+                    {tasksDisplay}
+                </div>
+                <div className="tooltip">
+                    <img className="delete-list-icon" src={delete_icon} width="30px" onClick={() => deleteList(currentList.id)}></img>
+                    <span className="tooltip-text">Delete list</span>
                 </div>
             </div>
-            <div className="list-body">
-                {tasksDisplay}
-            </div>
-            <div className="tooltip">
-              <img className="delete-list-icon" src={delete_icon} width="30px" onClick={() => deleteList(currentList.id)}></img>
-              <span className="tooltip-text">Delete list</span>
-            </div>
-             
+                : <div>
+                    <span className="close-list-span" onClick={() => toggleIsOpen(state => !state)}>-</span>
+                    <h2>{currentList.list_name}</h2>
+                </div>}
+
+
         </div>
     )
 

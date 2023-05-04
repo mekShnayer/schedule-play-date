@@ -1,6 +1,12 @@
-.log-in-container {
+
+.login-page{
     position: absolute;
-    left: 70px;
+    display: flex;
+    height: 95%;
+    align-items: center;
+    justify-content: center;
+}
+.log-in-container {
     flex-direction: column;
     height: 200px;
     justify-content: center;

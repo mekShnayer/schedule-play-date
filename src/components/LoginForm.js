@@ -31,25 +31,28 @@ const LoginForm = () => {
         dispatch({ type: 'LOGIN', payload: state.user.username })
     }
     return (
-        <div className="log-in-container glassmorphism">
-             <Logo />
-            <div className="header">
-                <h3>Please Login Here</h3>
-            </div>
-            <div className="form-body">
-                <form onSubmit={login}>
-                    <div>
-                        <input type='text' placeholder="user name" name='username' value={state.user.username} onChange={updateInput} required></input>
-                    </div>
-                    <div>
-                        <input type='password' placeholder="password" name='password' value={state.user.password} onChange={updateInput} required></input>
-                    </div>
-                    <div>
-                        <input type='submit' value='login'></input>
-                    </div>
-                </form>
+        <div className="login-page">
+            <div className="log-in-container glassmorphism">
+                <Logo />
+                <div className="header">
+                    <h3>Please Login Here</h3>
+                </div>
+                <div className="form-body">
+                    <form onSubmit={login}>
+                        <div>
+                            <input type='text' placeholder="user name" name='username' value={state.user.username} onChange={updateInput} required></input>
+                        </div>
+                        <div>
+                            <input type='password' placeholder="password" name='password' value={state.user.password} onChange={updateInput} required></input>
+                        </div>
+                        <div>
+                            <input type='submit' value='login'></input>
+                        </div>
+                    </form>
+                </div >
             </div >
-        </div >
+        </div>
+
     )
 }
 

@@ -5,12 +5,23 @@
     min-width: 100vw;
 
 }
+
+.menu-grid-container {
+    width: 100vw;
+    display: grid;
+    grid-template-columns: min-content 1fr min-content min-content;
+    justify-items: stretch;
+    align-items: end;
+}
+
+.menu-grid-item {
+    margin:0;
+}
+
 nav {
+
     background: #e3b8b8;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
+    height: min-content;
 }
 
 
@@ -22,15 +33,14 @@ nav {
 }
 
 nav ul {
-    width: 100%;
-    text-align: right;
+    
     margin: auto;
 }
 
 nav ul li {
-    display: inline-block;
+    
     list-style: none;
-    margin: 3px 19px;
+    margin: 7px 19px;
 }
 
 nav ul li a {
@@ -51,14 +61,14 @@ nav ul li a {
 
 .open-menu {
     max-height: 400px;
-   
+
 }
 
 .sub-menu {
     background: #fff;
     padding: 20px;
     margin: 10px;
-    
+
 }
 
 .user-info {

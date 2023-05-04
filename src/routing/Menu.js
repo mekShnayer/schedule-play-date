@@ -16,48 +16,60 @@ const Menu = () => {
     }
     return (
         <div className="menu">
-            <nav>
-                <Logo />
+            <nav className=" menu-grid-container">
+                <div className="menu-grid-item">
+                    <Logo />
+                </div>
 
-                <ul>
-                    <li><Link to="/#">Contact</Link></li>
-                    <li><Link to="/testing">Testing</Link></li>
-                </ul>
-                <img src={me} className="user-pic" alt="user-photo" onClick={toggleMenu}></img>
+                <div className="menu-grid-item">
+                    <Weather />
+                </div>
+                <div className="menu-grid-item">
+                    <ul>
+                        {/* <li><Link to="/">Home</Link></li>
+                    <li><Link to="/about">About</Link></li>
+                    <li><Link to="/profile">Profile</Link></li> */}
+                        <li><Link to="/testing">Testing</Link></li>
+                    </ul>
+                </div>
+                <div className="menu-grid-item">
+                    <img src={me} className="user-pic" alt="user-photo" onClick={toggleMenu}></img>
 
-                <div className="sub-menu-wrap" id="subMenu">
-                    <div className="sub-menu" >
-                        <div className="user-info">
-                            <img src={me} alt="user-image"></img>
-                            <h2>Shani mekitan</h2>
+                    <div className="sub-menu-wrap" id="subMenu">
+                        <div className="sub-menu" >
+                            <div className="user-info">
+                                <img src={me} alt="user-image"></img>
+                                <h2>Shani mekitan</h2>
+                            </div>
+                            <hr></hr>
+                            <a href="#" className="sub-menu-link">
+                                <img src={me} alt="help"></img>
+                                <p>Edit profile</p>
+                                <span>{'>'}</span>
+                            </a>
+                            <a href="#" className="sub-menu-link">
+                                <img src={me} alt="help"></img>
+                                <p>setting & privecy</p>
+                                <span>{'>'}</span>
+                            </a>
+                            <a href="#" className="sub-menu-link">
+                                <img src={me} alt="help"></img>
+                                <p>help & support</p>
+                                <span>{'>'}</span>
+                            </a>
+                            <a href="#" className="sub-menu-link">
+                                <img src={me} alt="help"></img>
+                                <p onClick={logOut}>logout</p>
+                                <span>{'>'}</span>
+                            </a>
+
                         </div>
-                        <hr></hr>
-                        <a href="#" className="sub-menu-link">
-                            <img src={me} alt="help"></img>
-                            <p>Edit profile</p>
-                            <span>{'>'}</span>
-                        </a>
-                        <a href="#" className="sub-menu-link">
-                            <img src={me} alt="help"></img>
-                            <p>setting & privecy</p>
-                            <span>{'>'}</span>
-                        </a>
-                        <a href="#" className="sub-menu-link">
-                            <img src={me} alt="help"></img>
-                            <p>help & support</p>
-                            <span>{'>'}</span>
-                        </a>
-                        <a href="#" className="sub-menu-link">
-                            <img src={me} alt="help"></img>
-                            <p onClick={logOut}>logout</p>
-                            <span>{'>'}</span>
-                        </a>
-
                     </div>
                 </div>
 
-            </nav>
-        </div>
+
+            </nav >
+        </div >
     )
 }
 

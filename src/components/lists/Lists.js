@@ -14,7 +14,7 @@ const Lists = () => {
 
     const listsDisplay = lists.map((list, index) => {
         return (
-            <List key={index} id={index} />
+            <List key={index} id={index} opened='True'/>
         )
     })
 

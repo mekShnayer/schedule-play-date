@@ -2,9 +2,11 @@ import React from "react";
 import { useDispatch, useSelector } from 'react-redux'
 import me from '../me.jpeg'
 const About = () => {
-
+    const existing_features = ['Add your child information', 'Add activities you and your kid enjoy', 'Check the weather to see if its best to stay home or play outside', 'See time log of the activities you have already done',
+        'Add to do lists to manage your day']
+    const upcomming_features = ['Chat - get to know the other moms and dads in your community', 'Information page - with articles and advices', 'Adding first year photo album']
     return (
-        <div className="">
+        <div className="page-item">
             <div className="about glassmorphism">
                 <h1>About</h1>
                 <p>My name is Shani and I created this app in inspiration to bring together a community.<br></br>
@@ -14,19 +16,13 @@ const About = () => {
                     <div>
                         <h4>So on that note - I give you a site that can:</h4>
                         <ul>
-                            <li>Add your child information</li>
-                            <li>Add activities you and your kid enjoy </li>
-                            <li>check the weather to see if its best to stay home or play outside</li>
-                            <li>See time log of the activities you have already done</li>
-                            <li>Add to do lists to manage your day</li>
+                            {existing_features.map((el, i) => <li key={i}>{el}</li>)}
                         </ul>
                     </div>
                     <div>
-                        <h4>upcomming fitures:</h4>
+                        <h4>Upcomming fitures:</h4>
                         <ul>
-                            <li>Chat - get to know the other moms and dads in your community</li>
-                            <li>information page - with articles and advices</li>
-                            <li>Adding first year photo album</li>
+                            {upcomming_features.map((el, i) => <li key={i}>{el}</li>)}
                         </ul>
                     </div>
 

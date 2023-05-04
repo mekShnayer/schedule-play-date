@@ -1,15 +1,15 @@
-import React, { useState } from "react";
-import './Home.css'
-import { useDispatch, useSelector } from 'react-redux'
-import { useEffect } from "react";
-import Timeline from "../components/Timeline";
-import weatherInfo from '../components/Weather';
-import Weather from "../components/Weather";
-import PlusMenu from '../routing/PlusMenu'
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import './HomePage.css';
+import SideMenu from "../routing/SideMenu";
+import Lists from "../components/lists/Lists";
+import Menu from '../routing/Menu'
+import Timeline from '../components/Timeline'
+import ActivityPage from '../pages/ActivityPage'
 
 
-const Home = () => {
+const HomePage = () => {
+
     const localstate = useSelector(state => state)//just for the local storage
     const dispatch = useDispatch()
 
@@ -41,21 +41,25 @@ const Home = () => {
     }
     makeSuggestion()
 
-
     return (
-        <div className="">
-            <div className="message-content">
-                <p>{message} </p>
-                <p>{suggestion}</p>
+        <div className="home-page ">
+            <div className="message-content flex-item">
+                <p>{message}<br></br> {suggestion}</p>
+               
             </div>
-
-            <Weather />
-            <div className="timeline-container glassmorphism">
+            <div className="flex-item">
                 <Timeline />
-                <button onClick={() => { dispatch({ type: 'CLEAR_LOG_HISTORY' }) }}>Clear History</button>
+            </div>
+            <hr></hr>
+            <div className="flex-item">
+                <ActivityPage />
+            </div>
+            <hr></hr>
+            <div className="flex-item">
+                <Lists />
             </div>
         </div>
     )
 }
 
-export default Home;
+export default HomePage;
